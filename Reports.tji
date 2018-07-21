@@ -32,7 +32,7 @@ navigator navbar {
     <[navigator id="navbar"]>
     ->8-
     footer "----"
-    textreport index "Übersicht" {
+    textreport index "index" {
     formats html
     center '<[report id="index"]>'
   }
