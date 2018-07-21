@@ -5,6 +5,10 @@ Die Projektplanung für den Umzug wird mit
 [Ruby](https://www.ruby-lang.org)-basiertes Werkzeug zur Verwaltung
 von Terminen, Aufgaben und deren Abhängigkeiten.
 
+## Aktueller Projektstand
+
+https://fablabnbg.github.io/Umzug/Overview.html
+
 
 ## Benutzung
 
@@ -15,10 +19,6 @@ von Terminen, Aufgaben und deren Abhängigkeiten.
 3. <tt>tj3 Umzug.tjp</tt>
 
 
-## ToDo
+## Travis CI
 
-Rakefile oder Makefile zur Generierung der Reports erstellen
-
-# ToDo++
-
-Report automagisch bei jeder Änderung erstellen
+Letzter Build [hier](https://travis-ci.org/fablabnbg/Umzug)
