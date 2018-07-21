@@ -1,10 +1,14 @@
 task :default => [:mkdir, :report]
 
+OUTPUTDIR = "reports"
+
 require 'rspec/core/rake_task'
 task :report do
-  `tj3 -o reports Umzug.tjp`
+  Kernel.system "tj3 -o #{OUTPUTDIR} Umzug.tjp"
 end
 
 task :mkdir do
-  Dir.mkdir 'reports'
+  unless Dir.exist? OUTPUTDIR
+    Dir.mkdir OUTPUTDIR
+  end
 end
