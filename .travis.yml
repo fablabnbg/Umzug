@@ -3,8 +3,8 @@ install:
   - gem install rake
 
 script:
-#  - tj3 Umzug.tjp
-  - rake
+  - tj3 Umzug.tjp
+#  - rake
 
 
 
