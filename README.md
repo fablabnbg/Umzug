@@ -1,4 +1,4 @@
-= Projektplanung Umzug
+# Projektplanung Umzug
 
 Die Projektplanung für den Umzug wird mit
 [TaskJuggler](http://taskjuggler.org) gemacht, ein einfaches,
