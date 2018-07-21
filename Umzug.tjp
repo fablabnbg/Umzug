@@ -7,6 +7,8 @@ project Umzug "FabLab NUE Umzug" 2018-08-01 - 2018-10-31 {
   timezone "Europe/Berlin"
   timeformat "%Y-%m-%d"
   outputdir "reports"
+  workinghours mon - fri 18:00 - 22:00
+  workinghours sat - sun 10:00 - 22:00
 }
 
 copyright "(c) by FabLab Region Nürnberg 2018"
