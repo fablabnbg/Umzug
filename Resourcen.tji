@@ -43,7 +43,13 @@ resource personen "Personen" {
   resource rainer1 "Rainer1"
   resource roman "Roman"
   resource schimmi "Schimmi"
-  resource simon "Simon"
+  resource simon "Simon" {
+    workinghours mon-wed 18:30-22:00
+    workinghours fri 18:30-22:00
+    workinghours sat 10:00-24:00
+    workinghours sun 12:00-21:00
+    leaves annual 2018-08-04 - 2018-08-28
+  }
   resource ulla "Ulla"
   resource yvonne "Yvonne"
 }

@@ -2,7 +2,7 @@ task umzug "Umzug" {
   task grundriss "Grundriss" {
     end 2018-08-31
   }
-  
+
   task baustrom "Baustrom" {
     effort 4h
     allocate schimmi

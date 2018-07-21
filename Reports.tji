@@ -6,26 +6,26 @@
 navigator navbar {
   hidereport 0
   }
-  
+
   macro TaskTip [
     tooltip istask() -8<-
     '''Start: ''' <-query attribute='start'->
     '''End: ''' <-query attribute='end'->
     ----
     '''Resources:'''
-                    
+
     <-query attribute='resources'->
     ----
     '''Precursors: '''
-    
+
     <-query attribute='precursors'->
     ----
     '''Followers: '''
-                                            
+
     <-query attribute='followers'->
     ->8-
   ]
-    
+
   textreport frame "" {
     header -8<-
     == FabLab Region Nürnberg -- Umzug ==
@@ -36,7 +36,7 @@ navigator navbar {
     formats html
     center '<[report id="index"]>'
   }
-                              
+
   textreport "Status" {
     formats html
     center -8<-
@@ -49,20 +49,20 @@ navigator navbar {
     <[report id="status.future"]>
     ->8-
   }
-                                          
+
 #  textreport umzug "Umzug" {
 #    textreport umzug1 "Umzug1" {
 #      formats html
 #      center '<[report id="umzug"]>'
 #    }
 #  }
-                                          
+
 
 #textreport "Deliveries" {
 #    formats html
 #    center '<[report id="deliveries"]>'
 #  }
-  
+
 #  textreport "ContactList" {
 #    formats html
 #    title "Contact List"
@@ -80,8 +80,8 @@ navigator navbar {
 taskreport index "" {
   header -8<-
   === Umzug -- Übersicht ===
-      
-  
+
+
   === Projektplan ===
   ->8-
   columns bsi { title 'WBS' }, name, start, end, effort, chart { ${TaskTip} }
@@ -90,19 +90,19 @@ taskreport index "" {
   timeformat "%a %Y-%m-%d"
   loadunit days
   hideresource 1
-  caption 'All effort values are in man days.'
-            
+  caption 'Alle Aufwände sind in Manntagen angegeben.'
+
   footer -8<-
   === Mitarbeiter ===
-  
+
   Der [[ResourceGraph]] zeigt die Einteilung der Mitarbeiter
-    
+
   === Aktueller Status ===
-        
+
   Wir brauchen MEHR DAMPF !
   ->8-
 }
-              
+
 # Macro to set the background color of a cell according to the alert
 # level of the task.
 macro AlertColor [
@@ -110,13 +110,13 @@ macro AlertColor [
   cellcolor plan.alert = 1 "#D0D000" # yellow
   cellcolor plan.alert = 2 "#D00000" # red
 ]
-      
+
 taskreport status "" {
   columns bsi { width 50 title 'WBS' }, name { width 150 }, start { width 100 }, end { width 100 }, effort { width 100 },
   alert { tooltip plan.journal != ''
   "<-query attribute='journal'->" width 150 },
   status { width 150 }
-          
+
   taskreport dashboard "" {
     headline "Project Dashboard (<-query attribute='now'->)"
     columns name { title "Task" ${AlertColor} width 200},
@@ -145,7 +145,7 @@ taskreport status "" {
     hidetask ~(plan.start > ${now})
   }
 }
-              
+
 # A list of tasks showing the resources assigned to each task.
 taskreport umzug_resources "" {
   headline "Umzug - Übersicht Helfer"
@@ -156,7 +156,7 @@ taskreport umzug_resources "" {
   sortresources name.up
 #  taskroot project.grundriss
 }
-                  
+
 # A graph showing resource allocation. It identifies whether each
 # resource is under- or over-allocated for.
 resourcereport resourceGraph "" {
@@ -167,4 +167,4 @@ resourcereport resourceGraph "" {
   hidetask ~(isleaf() & isleaf_())
   sorttasks plan.start.up
 }
-            
+
