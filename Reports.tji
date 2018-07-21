@@ -161,7 +161,7 @@ taskreport umzug_resources "" {
 # resource is under- or over-allocated for.
 resourcereport resourceGraph "" {
   headline "Übersicht Arbeitsbelastung"
-  columns no, name, effort, rate, weekly { ${TaskTip} }
+  columns no, name, effort, daily { ${TaskTip} }
   loadunit shortauto
   # We only like to show leaf tasks for leaf resources.
   hidetask ~(isleaf() & isleaf_())

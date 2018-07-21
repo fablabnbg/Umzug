@@ -3,82 +3,56 @@
  *  Resourcen
  */
 
+/* Shifts */
+shift urlaub "Urlaub" {
+  workinghours mon-sun 08:00-24:00
+}
 
-/* Teams für Sub-Projekte */
+shift na "Nicht verfügbar" {
+  leaves annual ${projectstart} - ${projectend}
+}
 
-resource textile "Textiles" {
+resource personen "Personen" {
+  resource cecdric "Cedric" {
+    shifts na
+  }
+  resource heinz "Heinz"
+  resource ian "Ian" {
+    workinghours mon-fri 19:00-24:00
+    workinghours sat-sun 10:00-22:00
+    leaves annual 2018-07-26 +4d,
+           annual 2018-08-17 +3d,
+           annual 2018-08-24 +3d
+  }
+  resource joo "Joo"
+  resource kilian "Kilian"
+  resource kkaempf "Klaus K"
+  resource klausl "Klaus L" {
+    workinghours mon-fri 18:00-23:00
+    workinghours sat-sun 10:00-21:00
+    leaves annual 2018-08-20 +7d
+  }
+  resource mose "Mose"
+  resource mozart "Mozart"
+  resource norbert "Norbert" {
+    workinghours mon-fri 19:00-23:00
+    workinghours sat 10:00-24:00
+    workinghours sun 11:00-20:30
+    shifts urlaub 2018-08-13 - 2018-08-24
+  }
+  resource rainer1 "Rainer1"
+  resource roman "Roman"
+  resource schimmi "Schimmi"
+  resource simon "Simon"
+  resource ulla "Ulla"
   resource yvonne "Yvonne"
 }
 
-resource dreid "3D" {
-  resource joo "Joo"
-}
-
-resource lager "Lager" {
-  resource simon "Simon"
-}
-
-resource werkstatt "Werkstatt" {
-  resource norbert "Norbert"
-}
-
-resource elektronik "Elektronik" {
-  resource roman "Roman"
-}
-
-resource trockenbau "Trockenbau" {
-  resource mose "Mose"
-}
-
-resource gastro "Gastro" {
-  resource ulla "Ulla"
-}
-
-resource it "IT" {
-  resource heinz "Heinz"
-}
-
-resource rem "REM" {
-  resource kkaempf "Klaus K"
-}
-
-resource elektrik "Elektrik" {
-  resource schimmi "Schimmi"
-}
-
-resource lueftung "Lüftung" {
-  resource rainer1 "Rainer1"
-}
-
-resource decken_boeden "Decken & Böden" {
-  resource ian "Ian"
-  email "ian@fabmail.org"
-  workinghours mon-fri 19:00-24:00
-  workinghours sat-sun 10:00-22:00
-  limits { weeklymax 12h dailymin 2h  }
-  leaves annual 2018-07-26 +4d,
-         annual 2018-08-17 +3d,
-         annual 2018-08-24 +3d         
-}
-
-resource pr_doku "PR/Doku" {
-  resource mozart "Mozart"
-}
-
-resource multimedia "Multimedia" {
-  resource kilian "Kilian" 
-}
-
-resource helfer "Helfer" {
-  resource klausl "Klaus L"
-  workinghours mon-fri 18:00-23:00
-  workinghours sat-sun 10:00-21:00
-  leaves annual 2018-08-20 +7d
-  limits { weeklymax 12h dailymin 2h  }
-}
+resource fahrgeruest "Fahrgerüst"
 
 macro allocate_verantwortliche [
     allocate yvonne
     allocate joo
     #, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
 ]
+
