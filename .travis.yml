@@ -1,0 +1,15 @@
+install:
+  - gem install taskjuggler
+
+script:
+  - tj3 Umzug.tjp
+
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: reports
+  on:
+    branch: master
