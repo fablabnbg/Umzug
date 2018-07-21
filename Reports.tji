@@ -164,7 +164,8 @@ resourcereport resourceGraph "" {
   columns no, name, effort, daily { ${TaskTip} }
   loadunit shortauto
   # We only like to show leaf tasks for leaf resources.
-  hidetask ~(isleaf() & isleaf_())
+  #hidetask ~(isleaf() & isleaf_())
+  hidetask all
   sorttasks plan.start.up
 }
 
