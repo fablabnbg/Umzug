@@ -16,7 +16,7 @@ https://fablabnbg.github.io/Umzug/Overview.html
 
 2. Dieses Repo clonen
 
-3. <tt>tj3 Umzug.tjp</tt>
+3. <tt>rake</tt>
 
 
 ## Travis CI
