@@ -27,6 +27,6 @@ Letzter Build [hier](https://travis-ci.org/fablabnbg/Umzug)
 ## Styleguide
 
 * Zeilenumbruchszeichen LF
-* Einrückung mit Tabs
+* Einrückung mit 2 Leerzeichen je Ebene
 * Leerzeichen am Zeilenende vermeiden
 * IDs je nach Typ am Anfang mit a,t,r gefolgt von einem Unterstrich vergeben
