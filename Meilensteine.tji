@@ -3,27 +3,6 @@ task milestones "Meilensteine" {
 	task start "Projektstart" {
 		start ${projectstart}
 	}
-
-        task jourfixe_aug_3 "Jour Fixe 19:00" {
-          start 2018-08-03
-        }
-
-        task jourfixe_aug_17 "Jour Fixe 19:00" {
-          start 2018-08-17
-        }
-
-        task jourfixe_aug_31 "Jour Fixe 19:00" {
-          start 2018-08-31
-        }
-
-        task jourfixe_sep_14 "Jour Fixe 19:00" {
-          start 2018-09-14
-        }
-
-        task jourfixe_sep_28 "Jour Fixe 19:00" {
-          start 2018-09-28
-        }
-
 	task access "Zugang möglich" {
 		depends !!milestones.start
 		note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich)"
@@ -58,4 +37,44 @@ task milestones "Meilensteine" {
 		start 2018-10-31
 		note "Späteste Übergabe altes Lab"
 	}
+}
+
+task besprechungen "Besprechungen" {
+        task jourfixe_aug_3 "Jour Fixe 19:00" {
+          start 2018-08-03
+          duration 3h
+          priority 800
+          ${allocate_verantwortliche}
+        }
+
+        task jourfixe_aug_17 "Jour Fixe 19:00" {
+          start 2018-08-17
+          duration 3h
+          ${allocate_verantwortliche}
+        }
+
+        task jourfixe_aug_31 "Jour Fixe 19:00" {
+          start 2018-08-31
+          duration 3h
+          ${allocate_verantwortliche}
+        }
+
+        task jourfixe_sep_14 "Jour Fixe 19:00" {
+          start 2018-09-14
+          duration 3h
+          ${allocate_verantwortliche}
+        }
+
+        task jourfixe_sep_28 "Jour Fixe 19:00" {
+          start 2018-09-28
+          duration 3h
+          ${allocate_verantwortliche}
+        }
+
+        task jourfixe_oct_12 "Jour Fixe 19:00" {
+          start 2018-10-12
+          duration 3h
+          ${allocate_verantwortliche}
+        }
+
 }
