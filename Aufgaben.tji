@@ -4,6 +4,8 @@ task umzug "Umzug" {
   }
   
   task baustrom "Baustrom" {
+    effort 4h
+    allocate schimmi
   }
   task boden_und_decken "Boden und Decke" {
     depends !grundriss
