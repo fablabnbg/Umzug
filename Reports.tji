@@ -28,7 +28,7 @@ navigator navbar {
     
   textreport frame "" {
     header -8<-
-    == TaskJuggler Project Template ==
+    == FabLab Region Nürnberg -- Umzug ==
     <[navigator id="navbar"]>
     ->8-
     footer "----"
@@ -71,7 +71,7 @@ navigator navbar {
 #
   textreport "ResourceGraph" {
     formats html
-    title "Resource Graph"
+    title "Übersicht Mitarbeiter"
     center '<[report id="resourceGraph"]>'
   }
 }
@@ -79,10 +79,10 @@ navigator navbar {
 # A traditional Gantt chart with a project overview.
 taskreport overview "" {
   header -8<-
-  === Project Overview ===
+  === Umzug -- Übersicht ===
       
   
-  === Original Project Plan ===
+  === Projektplan ===
   ->8-
   columns bsi { title 'WBS' }, name, start, end, effort, chart { ${TaskTip} }
   # For this report we like to have the abbreviated weekday in front
@@ -93,14 +93,13 @@ taskreport overview "" {
   caption 'All effort values are in man days.'
             
   footer -8<-
-  === Staffing ===
+  === Mitarbeiter ===
   
-  All project phases are properly staffed. See [[ResourceGraph]] for
-  detailed resource allocations.
+  Der [[ResourceGraph]] zeigt die Einteilung der Mitarbeiter
     
-  === Current Status ===
+  === Aktueller Status ===
         
-  Some blurb about the current situation.
+  Wir brauchen MEHR DAMPF !
   ->8-
 }
               
@@ -134,22 +133,22 @@ taskreport status "" {
             period %{${now} - 1w} +1w
    }
    taskreport completed "" {
-     headline "Already completed tasks"
+     headline "Fertig"
      hidetask ~(plan.end <= ${now})
    }
    taskreport ongoing "" {
-     headline "Ongoing tasks"
+     headline "In Arbeit"
      hidetask ~((plan.start <= ${now}) & (plan.end > ${now}))
   }
   taskreport future "" {
-    headline "Future tasks"
+    headline "Geplant"
     hidetask ~(plan.start > ${now})
   }
 }
               
 # A list of tasks showing the resources assigned to each task.
 taskreport umzug_resources "" {
-  headline "Umzug - Resource Allocation Report"
+  headline "Umzug - Übersicht Helfer"
   columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
       duration, chart { ${TaskTip} scale day width 500 }
   timeformat "%Y-%m-%d"
@@ -161,7 +160,7 @@ taskreport umzug_resources "" {
 # A graph showing resource allocation. It identifies whether each
 # resource is under- or over-allocated for.
 resourcereport resourceGraph "" {
-  headline "Resource Allocation Graph"
+  headline "Übersicht Arbeitsbelastung"
   columns no, name, effort, rate, weekly { ${TaskTip} }
   loadunit shortauto
   # We only like to show leaf tasks for leaf resources.
