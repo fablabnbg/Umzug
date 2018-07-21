@@ -1,0 +1,65 @@
+/*
+ * FabLab NUE Umzug
+ *  Resourcen
+ */
+
+
+/* Teams für Sub-Projekte */
+
+resource textile "Textiles" {
+  resource yvonne "Yvonne"
+}
+
+resource dreid "3D" {
+  resource joo "Joo"
+}
+
+resource lager "Lager" {
+  resource simon "Simon"
+}
+
+resource werkstatt "Werkstatt" {
+  resource norbert "Norbert"
+}
+
+resource elektronik "Elektronik" {
+  resource roman "Roman"
+}
+
+resource trockenbau "Trockenbau" {
+  resource mose "Mose"
+}
+
+resource gastro "Gastro" {
+  resource ulla "Ulla"
+}
+
+resource it "IT" {
+  resource heinz "Heinz"
+}
+
+resource rem "REM" {
+  resource kkaempf "Klaus K"
+}
+
+resource elektrik "Elektrik" {
+  resource schimmi "Schimmi"
+}
+
+resource lueftung "Lüftung" {
+  resource rainer1 "Rainer1"
+}
+
+resource decken_boeden "Decken & Böden" {
+  resource ian "Ian"
+}
+
+resource pr_doku "PR/Doku" {
+  resource mozart "Mozart"
+}
+
+resource multimedia "Multimedia" {
+  resource kilian "Kilian"
+}
+
+

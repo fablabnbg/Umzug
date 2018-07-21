@@ -1,0 +1,18 @@
+task umzug "Umzug" {
+  task grundriss "Grundriss" {
+    end 2018-08-31
+  }
+  
+  task baustrom "Baustrom" {
+  }
+  task boden_und_decken "Boden und Decke" {
+    depends !grundriss
+    task decken_streichen "Decken streichen"
+    task boden_schleifen "Boden schleifen" {
+      depends !!baustrom
+    }
+    task boden_streichen "Boden streichen" {
+      depends !boden_schleifen
+    }
+  }
+}

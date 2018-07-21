@@ -3,10 +3,15 @@
  *
  */
 
-project Umzug "FabLab NUE Umzug" 2018-08-01 2018-10-31 {
+project Umzug "FabLab NUE Umzug" 2018-08-01 - 2018-10-31 {
   timezone "Europe/Berlin"
-  timeformat "%d-%m-%Y"
+  timeformat "%Y-%m-%d"
 }
 
 copyright "(c) by FabLab Region Nürnberg 2018"
 
+include "Resourcen.tji"
+
+include "Aufgaben.tji"
+
+include "Reports.tji"
