@@ -32,9 +32,9 @@ navigator navbar {
     <[navigator id="navbar"]>
     ->8-
     footer "----"
-    textreport index "Overview" {
+    textreport index "Übersicht" {
     formats html
-    center '<[report id="overview"]>'
+    center '<[report id="index"]>'
   }
                               
   textreport "Status" {
@@ -77,7 +77,7 @@ navigator navbar {
 }
 
 # A traditional Gantt chart with a project overview.
-taskreport overview "" {
+taskreport index "" {
   header -8<-
   === Umzug -- Übersicht ===
       
