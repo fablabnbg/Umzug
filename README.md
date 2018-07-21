@@ -12,11 +12,11 @@ https://fablabnbg.github.io/Umzug/Overview.html
 
 ## Benutzung
 
-1. TasjJuggler installieren
+1. TasjJuggler installieren (`gem install taskjuggler`)
 
-2. Dieses Repo clonen
+2. Dieses Repo clonen (`git clone https://github.com/fablabnbg/Umzug.git`)
 
-3. <tt>rake</tt>
+3. `rake`
 
 
 ## Travis CI
