@@ -11,7 +11,7 @@ task :mkdir do
   unless Dir.exist? OUTPUTDIR
     Dir.mkdir OUTPUTDIR
   end
-  unless Dir.exist? OUTPUTDIR/personalCalendar
-    Dir.mkdir OUTPUTDIR/personalCalendar
+  unless Dir.exist? OUTPUTDIR/cal
+    Dir.mkdir OUTPUTDIR/cal
   end
 end
