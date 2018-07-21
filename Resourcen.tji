@@ -52,9 +52,10 @@ resource lueftung "Lüftung" {
 
 resource decken_boeden "Decken & Böden" {
   resource ian "Ian"
-  mail ian@fabmail.org  
-  workinghours Mon-Fri 19:00-24:00 Sat-Sun 10:00-22:00
-  limits { weeklymax 12h, dailymin 2h }
+  email "ian@fabmail.org"
+  workinghours mon-fri 19:00-24:00
+  workinghours sat-sun 10:00-22:00
+  limits { weeklymax 12h dailymin 2h  }
   leaves annual 2018-07-26 +4d,
          annual 2018-08-17 +3d,
          annual 2018-08-24 +3d         
@@ -70,9 +71,10 @@ resource multimedia "Multimedia" {
 
 resource helfer "Helfer" {
   resource klausl "Klaus L"
-  workinghours Mon-Fri 18:00-23:00 Sat-Sun 10:00-21:00
+  workinghours mon-fri 18:00-23:00
+  workinghours sat-sun 10:00-21:00
   leaves annual 2018-08-20 +7d
-  limits { weeklymax 12h, dailymin 2h }
+  limits { weeklymax 12h dailymin 2h  }
 }
 
 
