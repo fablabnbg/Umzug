@@ -50,24 +50,25 @@ navigator navbar {
     ->8-
   }
                                           
-  textreport umzug "Umzug" {
-    textreport umzug1 "Umzug1" {
-      formats html
-      center '<[report id="umzug"]>'
-    }
-                    
-  }
+#  textreport umzug "Umzug" {
+#    textreport umzug1 "Umzug1" {
+#      formats html
+#      center '<[report id="umzug"]>'
+#    }
+#  }
                                           
-  textreport "Deliveries" {
-    formats html
-    center '<[report id="deliveries"]>'
-  }
+
+#textreport "Deliveries" {
+#    formats html
+#    center '<[report id="deliveries"]>'
+#  }
   
-  textreport "ContactList" {
-    formats html
-    title "Contact List"
-    center '<[report id="contactList"]>'
-  }
+#  textreport "ContactList" {
+#    formats html
+#    title "Contact List"
+#    center '<[report id="contactList"]>'
+#  }
+#
   textreport "ResourceGraph" {
     formats html
     title "Resource Graph"
