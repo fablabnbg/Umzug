@@ -170,11 +170,14 @@ resourcereport resourceGraph "" {
 }
 
 
-icalreport "personalCalendar_ian.ics" {
+icalreport "cal/ian.ics" {
   hidetask ~isdutyof(ian, plan)
 }
 
-icalreport "personalCalendar_mose.ics" {
+icalreport "cal/mose.ics" {
   hidetask ~isdutyof(mose, plan)
 }
 
+icalreport "cal/norbert.ics" {
+  hidetask ~isdutyof(norbert, plan)
+}
