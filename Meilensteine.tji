@@ -1,0 +1,41 @@
+task milestones "Meilensteine" {
+
+	task start "Projektstart" {
+		start ${projectstart}
+	}
+
+	task access "Zugang möglich" {
+		depends !!milestones.start
+		note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich)"
+	}
+
+	task handover "Übergabe erfolgt" {
+		depends !!milestones.access
+		note "Das Lab gehört uns allein (alles leergeräumt)s."
+	}
+
+	task rohbau "Rohbau fertig" {
+		depends !!milestones.handover
+		note "Grundlegende Elektroverteilung, Decken, Böden, Wände"
+	}
+
+	task trockenbau "Trockenbau fertig" {
+		depends !!milestones.rohbau
+		note "Trockenbau, Deckenverkabelung (Elektrik), Licht usw. fertig"
+	}
+
+	task moebel "Moebel im Lab" {
+		depends !!milestones.trockenbau
+		note "Alles ist im Lab, was den Umzug der Geräte und Maschinen ermöglicht. (große Geräte gemeinsam mit großen Möbeln)"
+	}
+
+	task umzug	"Alles im Lab" {
+		depends !!milestones.moebel
+		note "Alles, was ins neue Lab soll, ist auch da"
+	}
+
+	task deadline "Übergabe altes Lab" {
+		start 2018-10-31
+		note "Späteste Übergabe altes Lab"
+	}
+}
