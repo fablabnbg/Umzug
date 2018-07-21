@@ -168,3 +168,12 @@ resourcereport resourceGraph "" {
   sorttasks plan.start.up
 }
 
+
+icalreport "personalCalendar_ian.ics" {
+  hidetask ~isdutyof(ian, plan)
+}
+
+icalreport "personalCalendar_mose.ics" {
+  hidetask ~isdutyof(mose, plan)
+}
+
