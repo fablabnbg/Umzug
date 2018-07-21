@@ -1,6 +1,7 @@
 task :default => [:mkdir, :report]
 
 OUTPUTDIR = "reports"
+CALDIR = "cal"
 
 require 'rspec/core/rake_task'
 task :report do
@@ -11,7 +12,7 @@ task :mkdir do
   unless Dir.exist? OUTPUTDIR
     Dir.mkdir OUTPUTDIR
   end
-  unless Dir.exist? OUTPUTDIR/cal
-    Dir.mkdir OUTPUTDIR/cal
+  unless Dir.exist? OUTPUTDIR+"/"+CALDIR
+    Dir.mkdir OUTPUTDIR+"/"+CALDIR
   end
 end
