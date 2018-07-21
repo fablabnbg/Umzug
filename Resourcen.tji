@@ -66,7 +66,7 @@ resource pr_doku "PR/Doku" {
 }
 
 resource multimedia "Multimedia" {
-  resource kilian "Kilian"
+  resource kilian "Kilian" 
 }
 
 resource helfer "Helfer" {
@@ -77,4 +77,8 @@ resource helfer "Helfer" {
   limits { weeklymax 12h dailymin 2h  }
 }
 
-
+macro allocate_verantwortliche [
+    allocate yvonne
+    allocate joo
+    #, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
+]
