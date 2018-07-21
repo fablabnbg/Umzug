@@ -5,7 +5,7 @@
 
 /* Shifts */
 shift urlaub "Urlaub" {
-  workinghours mon-sun 08:00-24:00
+  workinghours mon-sun 08:00-24:00  
 }
 
 shift na "Nicht verfügbar" {
@@ -13,14 +13,14 @@ shift na "Nicht verfügbar" {
 }
 
 resource personen "Personen" {
-  resource cecdric "Cedric" {
+  resource cedric "Cedric" {
     shifts na
   }
   resource heinz "Heinz"
   resource ian "Ian" {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
-    leaves annual 2018-07-26 +4d,
+    leaves annual 2018-07-26 +7d,
            annual 2018-08-17 +3d,
            annual 2018-08-24 +3d
   }
@@ -54,11 +54,18 @@ resource personen "Personen" {
   resource yvonne "Yvonne"
 }
 
-resource fahrgeruest "Fahrgerüst"
+resource werkzeug "Werkzeug, Fuhrpark usw." {
+  resource fahrgeruest "Fahrgerüst"
+  resource anhaenger "Anhänger"
+}
 
 macro allocate_verantwortliche [
-    allocate yvonne
-    allocate joo
-    #, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
+    allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
 ]
+
+macro allocate_all [
+    allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
+    allocate cedric, klausl
+]
+
 

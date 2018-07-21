@@ -12,7 +12,7 @@ task umzug "Umzug" {
     depends !grundriss
     task decken_streichen "Decken streichen"
     task boden_schleifen "Boden schleifen" {
-      depends !!baustrom
+      depends !!baustrom, milestones.handover
     }
     task boden_streichen "Boden streichen" {
       depends !boden_schleifen
