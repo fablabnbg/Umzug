@@ -169,11 +169,11 @@ resourcereport resourceGraph "" {
 }
 
 
-icalreport "personalCalendar_ian.ics" {
-  hidetask ~isdutyof(ian, plan)
+icalreport "personalCalendar/ian" {
+  hidetask ~(isdutyof(ian, plan) & istask() & isleaf())
 }
 
-icalreport "personalCalendar_mose.ics" {
-  hidetask ~isdutyof(mose, plan)
+icalreport "personalCalendar/mose" {
+  hidetask ~(isdutyof(mose, plan) & istask() & isleaf())
 }
 

@@ -3,7 +3,6 @@ install:
   - gem install rake rspec
 
 script:
-#  - tj3 Umzug.tjp
   - rake
 
 deploy:
