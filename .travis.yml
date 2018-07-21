@@ -2,7 +2,8 @@ install:
   - gem install taskjuggler
 
 script:
-  - tj3 Umzug.tjp
+   - rake 
+#  - tj3 Umzug.tjp
 
 
 deploy:
