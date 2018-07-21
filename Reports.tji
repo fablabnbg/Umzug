@@ -84,7 +84,7 @@ taskreport overview "" {
   
   === Original Project Plan ===
   ->8-
-  columns bsi { title 'WBS' }, name, start, end, effort, cost, revenue, chart { ${TaskTip} }
+  columns bsi { title 'WBS' }, name, start, end, effort, chart { ${TaskTip} }
   # For this report we like to have the abbreviated weekday in front
   # of the date. %a is the tag for this.
   timeformat "%a %Y-%m-%d"
