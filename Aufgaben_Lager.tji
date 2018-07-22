@@ -1,0 +1,8 @@
+supplement task umzug {   
+  task lager "Lagerflächen, Flohmarkt usw." {
+    responsible simonp
+
+    /* **** insert tasks here ****/
+  
+  }
+}

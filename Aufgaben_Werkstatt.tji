@@ -1,0 +1,8 @@
+supplement task umzug {
+  task werkstatt "Werkstatt" {
+    responsible norberts
+
+    /* **** insert tasks here ****/
+    
+  }
+}

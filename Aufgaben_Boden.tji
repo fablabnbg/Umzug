@@ -1,0 +1,62 @@
+supplement task umzug {
+  task boden_und_decken "Boden und Decke" {
+    responsible ianh
+    priority 400
+
+    task reservierung_sprueh "Werkzeug reservieren (Decke streichen)" {
+      effort 3h
+      allocate ianh {mandatory}
+    }
+
+    task decken_streichen "Decke streichen" {
+      allocate ianh {mandatory}
+      allocate pfs {mandatory}
+      depends milestones.handover, !!elektrik.baustrom, !reservierung_sprueh {gapduration 7d}
+      effort 48h
+      // Ian + 3 Helfer
+      allocate ianh
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+
+    }
+
+    task boden_schleifen "Boden schleifen" {
+      depends !!elektrik.baustrom, milestones.handover
+      allocate fbsm { mandatory }
+      allocate lab_neu { mandatory }
+      effort 40h
+      // Ian + 2 Helfer
+      allocate ianh
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+
+    }
+
+    task boden_streichen "Boden streichen" {
+      depends !boden_schleifen
+      // das komplette neu Lab steht in der Zeit nicht für andere Aufgaben zur Verfügung
+      allocate lab_neu { mandatory }
+      task boden_streichen1 "Boden streichen: Schritt 1" {
+        effort 16h
+        // Ian + 2 Helfer
+        allocate ianh
+        ${select1FromHelperPool}
+        ${select1FromHelperPool}
+      }
+      task boden_trocknen1 "Boden streichen: Trocknen 1" {
+        length 16h
+      }
+      task boden_streichen2 "Boden streichen: Schritt 2" {
+        effort 16h
+        // Ian + 2 Helfer
+        allocate ianh
+        ${select1FromHelperPool}
+        ${select1FromHelperPool}
+      }
+      task boden_trocknen2 "Boden streichen: Trocknen 2" {
+        length 24h /* längere Zeit, damit vollständig trocknet */
+      }
+    }
+  }
+}

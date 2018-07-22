@@ -1,0 +1,7 @@
+supplement task umzug {
+  task textil "Textiles" {
+    responsible yvonneb
+
+    /* **** insert tasks here ****/
+  }
+}

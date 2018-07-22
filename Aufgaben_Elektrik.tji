@@ -1,0 +1,29 @@
+supplement task umzug {
+  task elektrik "Elektrik" {
+    responsible schimmi
+    task baustrom "Baustrom" {
+      effort 4h
+      allocate schimmi { mandatory }
+      allocate lab_neu { mandatory }
+      depends milestones.access
+    }
+    task hauptverteiler "Hauptverteilerkasten" {
+      allocate schimmi { mandatory }
+      task hauptverteiler_planung "Hauptverteiler: Planung" {
+        note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
+        effort 20h
+      }
+      task hauptverteiler_montage "Hauptverteiler: Vor-Montage" {
+        depends !hauptverteiler_planung { gapduration 5d } // 7d fuer Bestellung und Lieferung aller Komponenten
+        note "Zusammenbau des Verteilers vor Installation (im alten oder neuen Lab oder zu Hause)"
+        effort 10h
+      }
+
+      task hauptverteiler_installation "Hauptverteiler: Installation" {
+        effort 6h
+        depends !hauptverteiler_montage, milestones.access
+      }
+
+    }
+  }
+}
