@@ -28,7 +28,7 @@ task umzug "Umzug" {
       task boden_streichen1 "Boden streichen: Schritt 1" {
         effort 16h
         // Ian + 2 Helfer
-        allocate ian
+        allocate ianh
         ${select1FromHelperPool}
         ${select1FromHelperPool}        
       }
@@ -38,7 +38,7 @@ task umzug "Umzug" {
       task boden_streichen2 "Boden streichen: Schritt 2" {
         effort 16h
         // Ian + 2 Helfer
-        allocate ian
+        allocate ianh
         ${select1FromHelperPool}
         ${select1FromHelperPool}        
       }

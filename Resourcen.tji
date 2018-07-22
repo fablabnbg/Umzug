@@ -106,7 +106,7 @@ macro allocate_verantwortliche [
 ]
 
 macro select1FromHelperPool [
-  allocate yvonne { alternative joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian, cedric, klausl }
+  allocate yvonneb { alternative joo, simonp, norberts, romanj, mose, ullar, heinzb, kkaempf, schimmi, rainer1, ianh, mozart, kilianb }
 ]
 
 macro allocate_all [
