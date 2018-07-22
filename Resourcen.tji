@@ -80,8 +80,17 @@ resource personen "Personen" {
 resource spezial "Weitere Ressourcen" {
   efficiency 0.01  // ersetzt keine Helfer
   workinghours mon-sun 00:00-24:00
-  resource lab_neu "Lab (neu)"
-  resource lab_alt "Lab (alt)"
+  resource lab_neu "Lab (neu)" {    
+    resource lab_neu_kueche "Küche"
+    resource lab_neu_elab "Elektroniklab"
+    resource lab_neu_textil "Textilecke"
+    resource lab_neu_rem "REM"
+    resource lab_neu_lager "Lagerflächen"
+    resource lab_neu_werkstatt "Werkstatt"
+    resource lab_neu_laser "Laser & Lüftung"
+    
+  }
+  resource lab_alt "Lab (alt)" 
 }
 
 

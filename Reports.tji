@@ -9,8 +9,8 @@ navigator navbar {
 
   macro TaskTip [
     tooltip istask() -8<-
-    '''Start: ''' <-query attribute='start'->
-    '''End: ''' <-query attribute='end'->
+    '''Start: ''' <-query timeformat='%Y-%m-%d %R' attribute='start' ->
+    '''End: ''' <-query timeformat='%Y-%m-%d %R' attribute='end'->
     ----
     '''Resources:'''
 
