@@ -13,26 +13,38 @@ shift na "Nicht verfügbar" {
 }
 
 resource personen "Personen" {
-  resource cedric "Cedric" {
+  resource cedricj "Cedric J." {
     shifts na
   }
-  resource heinz "Heinz"
-  resource ian "Ian" {
+  resource christians "Christian S." {
+    workinghours fri 19:00-24:00
+    workinghours sat 10:00-24:00
+    workinghours sat 10:00-22:00
+    leaves annual 2018-09-07 +3d
+    leaves annual 2018-09-28 +3d
+  }
+  resource heinzb "Heinz B."
+  resource ianh "Ian H." {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
     leaves annual 2018-07-26 +7d,
            annual 2018-08-17 +3d,
            annual 2018-08-24 +3d
   }
-  resource johann "Johann" {
+  resource johanns "Johann S." {
     workinghours mon-sun 12:00-24:00
     leaves annual 2018-08-08
     leaves annual 2018-10-01 - 2018-10-31
   }
-  resource joo "Joo"
-  resource kilian "Kilian"
-  resource kkaempf "Klaus K"
-  resource klausl "Klaus L" {
+  resource johannesh "Johannes H."
+  resource katharinan "Katharina N." {
+    workinghours mon-fri 18:00-22:00
+    workinghours sat-sun 10:00-22:00
+    leaves annual 2018-09-28 +3d
+  }
+  resource kilianb "Kilian B."
+  resource kkaempf "Klaus K."
+  resource klausl "Klaus L." {
     workinghours mon-fri 18:00-23:00
     workinghours sat-sun 10:00-21:00
     leaves annual 2018-08-20 +7d
@@ -44,24 +56,24 @@ resource personen "Personen" {
   }
   resource mose "Mose"
   resource mozart "Mozart"
-  resource norbert "Norbert" {
+  resource norberts "Norbert S." {
     workinghours mon-fri 19:00-23:00
     workinghours sat 10:00-24:00
     workinghours sun 11:00-20:30
     shifts urlaub 2018-08-13 - 2018-08-24
   }
-  resource rainer1 "Rainer1"
-  resource roman "Roman"
+  resource rainer1 "Rainer 1"
+  resource romanj "Roman J."
   resource schimmi "Schimmi"
-  resource simon "Simon" {
+  resource simonp "Simon P." {
     workinghours mon-wed 18:30-22:00
     workinghours fri 18:30-22:00
     workinghours sat 10:00-24:00
     workinghours sun 12:00-21:00
     leaves annual 2018-08-04 - 2018-08-28
   }
-  resource ulla "Ulla"
-  resource yvonne "Yvonne"
+  resource ullar "Ulla R."
+  resource yvonneb "Yvonne B."
 }
 
 resource werkzeug "Werkzeug, Fuhrpark usw." {
