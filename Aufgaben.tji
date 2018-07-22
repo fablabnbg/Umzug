@@ -8,7 +8,7 @@ task umzug "Umzug" {
     allocate schimmi
   }
   task boden_und_decken "Boden und Decke" {
-    responsible ian
+    responsible ianh
     depends !grundriss
     task decken_streichen "Decken streichen"
     task boden_schleifen "Boden schleifen" {
