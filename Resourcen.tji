@@ -36,7 +36,7 @@ resource personen "Personen" {
     leaves annual 2018-08-08
     leaves annual 2018-10-01 - 2018-10-31
   }
-  resource johannesh "Johannes H."
+  resource joo "Joo"
   resource katharinan "Katharina N." {
     workinghours mon-fri 18:00-22:00
     workinghours sat-sun 10:00-22:00
@@ -82,12 +82,12 @@ resource werkzeug "Werkzeug, Fuhrpark usw." {
 }
 
 macro allocate_verantwortliche [
-    allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
+    allocate yvonneb, joo, simonp, norberts, romanj, mose, ullar, heinzb, kkaempf, schimmi, rainer1, ianh, mozart, kilianb
 ]
 
 macro allocate_all [
-    allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
-    allocate cedric, klausl
+    allocate yvonneb, joo, simonp, norberts, romanj, mose, ullar, heinzb, kkaempf, schimmi, rainer1, ianh, mozart, kilianb
+    allocate cedricj, klausl
 ]
 
 
