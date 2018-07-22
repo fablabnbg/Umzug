@@ -162,6 +162,7 @@ taskreport umzug_resources "" {
 resourcereport resourceGraph "" {
   headline "Übersicht Arbeitsbelastung"
   columns no, name, effort, daily { ${TaskTip} }
+  #columns no, name, duration, daily { ${TaskTip} }
   loadunit shortauto
   # We only like to show leaf tasks for leaf resources.
   #hidetask ~(isleaf() & isleaf_())
@@ -170,6 +171,7 @@ resourcereport resourceGraph "" {
 }
 
 
+/* TODO: Filter out TODOs for each task */
 icalreport "cal/ian" {
   hidetask ~(isdutyof(ian, plan) & istask() & isleaf())
 }

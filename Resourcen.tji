@@ -64,18 +64,43 @@ resource personen "Personen" {
   resource yvonne "Yvonne"
 }
 
+/* spezielle Ressourcen */
+resource spezial "Weitere Ressourcen" {
+  efficiency 0.01  // ersetzt keine Helfer
+  workinghours mon-sun 00:00-24:00
+  resource lab_neu "Lab (neu)"
+  resource lab_alt "Lab (alt)"
+}
+
+
+/* eigenes Werkzeug (inkl. Werkzeug von Mitgliedern) */
 resource werkzeug "Werkzeug, Fuhrpark usw." {
+  efficiency 0.01 // ersetzt keine Helfer
   resource fahrgeruest "Fahrgerüst"
   resource anhaenger "Anhänger"
+}
+
+/* extern geliehenes Werkzeug  */
+resource werkzeug_ext "Auszuleihendes Werkzeug" {
+  efficiency 0.01 // ersetzt keine Helfer
+  limits{dailymin 4h}
+  resource fbsm "Fussbodenschleifmaschine (Beton)"
+  resource kernlochbohrer "Kernlochbohrer"
+  resource pfs "Farbsprühsystem"
 }
 
 macro allocate_verantwortliche [
     allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
 ]
 
+macro select1FromHelperPool [
+  allocate yvonne { alternative joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian, cedric, klausl }
+]
+
 macro allocate_all [
     allocate yvonne, joo, simon, norbert, roman, mose, ulla, heinz, kkaempf, schimmi, rainer1, ian, mozart, kilian
     allocate cedric, klausl
 ]
+
 
 

@@ -10,12 +10,41 @@ task umzug "Umzug" {
   task boden_und_decken "Boden und Decke" {
     responsible ian
     depends !grundriss
-    task decken_streichen "Decken streichen"
+    task decken_streichen "Decken streichen" {
+      effort 48h
+      ${allocate_all}
+    }
     task boden_schleifen "Boden schleifen" {
       depends !!baustrom, milestones.handover
+      allocate fbsm { mandatory }
+      allocate lab_neu { mandatory }
+      effort 40h
+      ${allocate_all}
     }
     task boden_streichen "Boden streichen" {
-      depends !boden_schleifen
+      depends !boden_schleifen      
+      // das komplette neu Lab steht in der Zeit nicht für andere Aufgaben zur Verfügung
+      allocate lab_neu { mandatory }
+      task boden_streichen1 "Boden streichen: Schritt 1" {
+        effort 16h
+        // Ian + 2 Helfer
+        allocate ian
+        ${select1FromHelperPool}
+        ${select1FromHelperPool}        
+      }
+      task boden_trocknen1 "Boden streichen: Trocknen 1" {
+        length 16h
+      }
+      task boden_streichen2 "Boden streichen: Schritt 2" {
+        effort 16h
+        // Ian + 2 Helfer
+        allocate ian
+        ${select1FromHelperPool}
+        ${select1FromHelperPool}        
+      }
+      task boden_trocknen2 "Boden streichen: Trocknen 2" {
+        length 24h /* längere Zeit, damit vollständig trocknet */
+      }          
     }
   }
 }
