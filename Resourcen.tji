@@ -92,6 +92,7 @@ resource werkzeug "Werkzeug, Fuhrpark usw." {
   resource anhaenger "Anhänger"
 }
 
+
 /* extern geliehenes Werkzeug  */
 resource werkzeug_ext "Auszuleihendes Werkzeug" {
   efficiency 0.01 // ersetzt keine Helfer
@@ -100,6 +101,36 @@ resource werkzeug_ext "Auszuleihendes Werkzeug" {
   resource kernlochbohrer "Kernlochbohrer"
   resource pfs "Farbsprühsystem"
 }
+
+# Stellt jeder Person ein persönliches iCal File bereit.
+# Wäre in Reports.tji vielleicht besser aufgehoben, aber
+# so bleibt hier alles zusammen bei neuen Leuten.
+macro persical [
+  icalreport "cal/${1}" {
+    hidetask ~(isdutyof(${1}, plan) & istask() & isleaf())
+  }
+]
+
+${persical "cedricj"}
+${persical "christians"}
+${persical "heinzb"}
+${persical "ianh"}
+${persical "johanns"}
+${persical "joo"}
+${persical "katharinan"}
+${persical "kilianb"}
+${persical "kkaempf"}
+${persical "klausl"}
+${persical "michaelp"}
+${persical "mose"}
+${persical "mozart"}
+${persical "norberts"}
+${persical "rainer1"}
+${persical "romanj"}
+${persical "schimmi"}
+${persical "simonp"}
+${persical "ullar"}
+${persical "yvonneb"}
 
 macro allocate_verantwortliche [
     allocate yvonneb, joo, simonp, norberts, romanj, mose, ullar, heinzb, kkaempf, schimmi, rainer1, ianh, mozart, kilianb

@@ -169,17 +169,3 @@ resourcereport resourceGraph "" {
   hidetask @all
   sorttasks plan.start.up
 }
-
-
-/* TODO: Filter out TODOs for each task */
-icalreport "cal/ian" {
-  hidetask ~(isdutyof(ian, plan) & istask() & isleaf())
-}
-
-icalreport "cal/mose" {
-  hidetask ~(isdutyof(mose, plan) & istask() & isleaf())
-}
-
-icalreport "cal/norbert" {
-  hidetask ~(isdutyof(norbert, plan) & istask() & isleaf())
-}
