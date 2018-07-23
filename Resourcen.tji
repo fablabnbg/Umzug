@@ -20,7 +20,15 @@ resource personen "Personen" {
     leaves annual 2018-09-07 +3d
     leaves annual 2018-09-28 +3d
   }
-  resource heinzb "Heinz B."
+  resource heinzb "Heinz B." {
+    workinghours mon-tue off
+    workinghours wed 18:00-24:00
+    workinghours thu off
+    workinghours fri 14:00-24:00
+    workinghours sat 10:00-24:00
+    workinghours sun off
+    leaves annual 2018-08-13
+  }
   resource ianh "Ian H." {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
