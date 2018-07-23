@@ -17,19 +17,26 @@ flags isresource
 resource personen "Personen" {
   resource angelar "Angela vR."
   resource cedricj "Cedric J." {
-    shifts na
+    workinghours mon-sun off
   }
   
   resource christians "Christian S." {
+    workinghours mon-thu off
     workinghours fri 19:00-24:00
     workinghours sat 10:00-24:00
     workinghours sat 10:00-22:00
     leaves annual 2018-09-07 +3d
     leaves annual 2018-09-28 +3d
   }
-  
-  resource heinzb "Heinz B."
-  
+  resource heinzb "Heinz B." {
+    workinghours mon-tue off
+    workinghours wed 18:00-24:00
+    workinghours thu off
+    workinghours fri 14:00-24:00
+    workinghours sat 10:00-24:00
+    workinghours sun off
+    leaves annual 2018-08-13
+  }
   resource ianh "Ian H." {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
@@ -66,7 +73,8 @@ resource personen "Personen" {
   
   resource michaelp "Michael P." {
     workinghours mon, fri 17:00-24:00
-    workinghours sat, sun 10:00-24:00
+    workinghours tue-thu off
+    workinghours sat-sun 10:00-24:00
     leaves annual 2018-08-01 - 2018-08-31
   }
   
@@ -85,6 +93,7 @@ resource personen "Personen" {
   
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
+    workinghours thu-sun off
   }
   
   resource romanj "Roman J."
@@ -93,6 +102,7 @@ resource personen "Personen" {
   
   resource simonp "Simon P." {
     workinghours mon-wed 18:30-22:00
+    workinghours thu off
     workinghours fri 18:30-22:00
     workinghours sat 10:00-24:00
     workinghours sun 12:00-21:00
