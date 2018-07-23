@@ -8,15 +8,12 @@ shift urlaub "Urlaub" {
   workinghours mon-sun 08:00-24:00
 }
 
-shift na "Nicht verfügbar" {
-  leaves annual ${projectstart} - ${projectend}
-}
-
 resource personen "Personen" {
   resource cedricj "Cedric J." {
-    shifts na
+    workinghours off
   }
   resource christians "Christian S." {
+    workinghours mon-thu off
     workinghours fri 19:00-24:00
     workinghours sat 10:00-24:00
     workinghours sat 10:00-22:00
@@ -51,7 +48,8 @@ resource personen "Personen" {
   }
   resource michaelp "Michael P." {
     workinghours mon, fri 17:00-24:00
-    workinghours sat, sun 10:00-24:00
+    workinghours tue-thu off
+    workinghours sat-sun 10:00-24:00
     leaves annual 2018-08-01 - 2018-08-31
   }
   resource mose "Mose"
@@ -65,11 +63,13 @@ resource personen "Personen" {
   resource rainer1 "Rainer 1"
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
+    workinghours thu-sun off
   }
   resource romanj "Roman J."
   resource schimmi "Schimmi"
   resource simonp "Simon P." {
     workinghours mon-wed 18:30-22:00
+    workinghours thu off
     workinghours fri 18:30-22:00
     workinghours sat 10:00-24:00
     workinghours sun 12:00-21:00
