@@ -10,7 +10,7 @@ shift urlaub "Urlaub" {
 
 resource personen "Personen" {
   resource cedricj "Cedric J." {
-    workinghours off
+    workinghours mon-sun off
   }
   resource christians "Christian S." {
     workinghours mon-thu off
