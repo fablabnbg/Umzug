@@ -56,6 +56,7 @@ supplement task umzug {
       }
       task boden_trocknen2 "Boden streichen: Trocknen 2" {
         length 24h /* längere Zeit, damit vollständig trocknet */
+        //precedes milestones.rohbau
       }
     }
   }

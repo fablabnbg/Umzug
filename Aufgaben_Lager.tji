@@ -2,7 +2,16 @@ supplement task umzug {
   task lager "Lagerflächen, Flohmarkt usw." {
     responsible simonp
 
-    /* **** insert tasks here ****/
+    task lager_sortieren_lab "Lager im Lab ausmisten" {
+      period 2018-07-28-14:00 +5h
+      allocate simonp {mandatory}
+      allocate angelar
+      allocate jank
+      allocate jensk
+      allocate veronikab
+      allocate tobiasb
+      allocate michaelp
+    }
   
   }
 }

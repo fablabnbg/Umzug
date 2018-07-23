@@ -12,10 +12,14 @@ shift na "Nicht verfügbar" {
   leaves annual ${projectstart} - ${projectend}
 }
 
+flags isresource
+
 resource personen "Personen" {
+  resource angelar "Angela vR."
   resource cedricj "Cedric J." {
     shifts na
   }
+  
   resource christians "Christian S." {
     workinghours fri 19:00-24:00
     workinghours sat 10:00-24:00
@@ -23,7 +27,9 @@ resource personen "Personen" {
     leaves annual 2018-09-07 +3d
     leaves annual 2018-09-28 +3d
   }
+  
   resource heinzb "Heinz B."
+  
   resource ianh "Ian H." {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
@@ -31,43 +37,60 @@ resource personen "Personen" {
            annual 2018-08-17 +3d,
            annual 2018-08-24 +3d
   }
+  
+  resource jank "Jan K."
+
+  resource jensk "Jens K."
+
   resource johanns "Johann S." {
     workinghours mon-sun 12:00-24:00
     leaves annual 2018-08-08
     leaves annual 2018-10-01 - 2018-10-31
   }
   resource joo "Joo"
+  
   resource katharinan "Katharina N." {
     workinghours mon-fri 18:00-22:00
     workinghours sat-sun 10:00-22:00
     leaves annual 2018-09-28 +3d
   }
   resource kilianb "Kilian B."
+  
   resource kkaempf "Klaus K."
+  
   resource klausl "Klaus L." {
     workinghours mon-fri 18:00-23:00
     workinghours sat-sun 10:00-21:00
     leaves annual 2018-08-20 +7d
   }
+  
   resource michaelp "Michael P." {
     workinghours mon, fri 17:00-24:00
     workinghours sat, sun 10:00-24:00
     leaves annual 2018-08-01 - 2018-08-31
   }
+  
   resource mose "Mose"
+  
   resource mozart "Mozart"
+  
   resource norberts "Norbert S." {
     workinghours mon-fri 19:00-23:00
     workinghours sat 10:00-24:00
     workinghours sun 11:00-20:30
-    shifts urlaub 2018-08-13 - 2018-08-24
+    shifts urlaub 2018-08-13 - 2018-08-24  
   }
+  
   resource rainer1 "Rainer 1"
+  
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
   }
+  
   resource romanj "Roman J."
+  
   resource schimmi "Schimmi"
+  
   resource simonp "Simon P." {
     workinghours mon-wed 18:30-22:00
     workinghours fri 18:30-22:00
@@ -75,12 +98,24 @@ resource personen "Personen" {
     workinghours sun 12:00-21:00
     leaves annual 2018-08-04 - 2018-08-28
   }
+  
+  resource tobiasb "Tobias B."
+  
   resource ullar "Ulla R."
+  
+  resource veronikab "Veronika B."
+  
   resource yvonneb "Yvonne B."
+  
+  
+  
+  
+  
 }
 
 /* spezielle Ressourcen */
 resource spezial "Weitere Ressourcen" {
+  flags isresource
   efficiency 0.01  // ersetzt keine Helfer
   workinghours mon-sun 00:00-24:00
   resource lab_neu "Lab (neu)" {
@@ -99,6 +134,7 @@ resource spezial "Weitere Ressourcen" {
 
 /* eigenes Werkzeug (inkl. Werkzeug von Mitgliedern) */
 resource werkzeug "Werkzeug, Fuhrpark usw." {
+  flags isresource
   efficiency 0.01 // ersetzt keine Helfer
   resource fahrgeruest "Fahrgerüst"
   resource anhaenger "Anhänger"
@@ -107,6 +143,7 @@ resource werkzeug "Werkzeug, Fuhrpark usw." {
 
 /* extern geliehenes Werkzeug  */
 resource werkzeug_ext "Auszuleihendes Werkzeug" {
+  flags isresource
   efficiency 0.01 // ersetzt keine Helfer
   limits{dailymin 4h}
   resource fbsm "Fussbodenschleifmaschine (Beton)"

@@ -1,0 +1,6 @@
+supplement task umzug {
+  task rem "REM inkl. benötiger Infrastruktur" {
+  responsible kkaempf
+  /* **** insert tasks here ****/
+  }
+}

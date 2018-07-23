@@ -4,10 +4,11 @@ task umzug "Umzug" {
   }
 }
 
-  include "Aufgaben_Elektrik.tji"
-  include "Aufgaben_Boden.tji"
-  include "Aufgaben_3D.tji"
-  include "Aufgaben_Textil.tji"
-  include "Aufgaben_Werkstatt.tji"
-  include "Aufgaben_Lager.tji"
-  include "Aufgaben_PR.tji"
+include "Aufgaben_Elektrik.tji"
+include "Aufgaben_Boden.tji"
+include "Aufgaben_3D.tji"
+include "Aufgaben_Textil.tji"
+include "Aufgaben_Werkstatt.tji"
+include "Aufgaben_Lager.tji"
+include "Aufgaben_PR.tji"
+include "Aufgaben_REM.tji"

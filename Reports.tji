@@ -12,15 +12,15 @@ navigator navbar {
     '''Start: ''' <-query timeformat='%Y-%m-%d %R' attribute='start' ->
     '''End: ''' <-query timeformat='%Y-%m-%d %R' attribute='end'->
     ----
-    '''Resources:'''
+    '''Helfer:'''
 
     <-query attribute='resources'->
     ----
-    '''Precursors: '''
+    '''Vorgänger: '''
 
     <-query attribute='precursors'->
     ----
-    '''Followers: '''
+    '''Nachfolger: '''
 
     <-query attribute='followers'->
     ->8-

@@ -3,7 +3,7 @@
  *
  */
 
-project Umzug "FabLab NUE Umzug" 2018-08-01 - 2018-10-31 {
+project Umzug "FabLab NUE Umzug" 2018-07-28 - 2018-10-31 {
   timezone "Europe/Berlin"
   timeformat "%Y-%m-%d"
   outputdir "reports"

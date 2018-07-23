@@ -5,16 +5,18 @@ task milestones "Meilensteine" {
   }
   task access "Zugang möglich" {
     depends !!milestones.start
-    note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich)"
+    start 2018-08-15-15:00 // geschätzt
+    note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich) - Zeitpunkt spekulativ"
   }
 
   task handover "Übergabe erfolgt" {
     depends !!milestones.access
-    note "Das Lab gehört uns allein (alles leergeräumt)s."
+    start 2018-09-01-09:00 // erwartet
+    note "Das Lab gehört uns allein (alles leergeräumt). - Zeitpunkt geplant"
   }
 
   task rohbau "Rohbau fertig" {
-    depends !!milestones.handover
+    depends milestones.handover, umzug.boden_und_decken.boden_streichen.boden_trocknen2
     note "Grundlegende Elektroverteilung, Decken, Böden, Wände"
   }
 
