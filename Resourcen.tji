@@ -5,7 +5,7 @@
 
 /* Shifts */
 shift urlaub "Urlaub" {
-  workinghours mon-sun 08:00-24:00  
+  workinghours mon-sun 08:00-24:00
 }
 
 shift na "Nicht verfügbar" {
@@ -63,6 +63,9 @@ resource personen "Personen" {
     shifts urlaub 2018-08-13 - 2018-08-24
   }
   resource rainer1 "Rainer 1"
+  resource rolfn "Rolf N." {
+    workinghours mon-wed 08:00-24:00
+  }
   resource romanj "Roman J."
   resource schimmi "Schimmi"
   resource simonp "Simon P." {
@@ -80,7 +83,7 @@ resource personen "Personen" {
 resource spezial "Weitere Ressourcen" {
   efficiency 0.01  // ersetzt keine Helfer
   workinghours mon-sun 00:00-24:00
-  resource lab_neu "Lab (neu)" {    
+  resource lab_neu "Lab (neu)" {
     resource lab_neu_kueche "Küche"
     resource lab_neu_elab "Elektroniklab"
     resource lab_neu_textil "Textilecke"
@@ -88,9 +91,9 @@ resource spezial "Weitere Ressourcen" {
     resource lab_neu_lager "Lagerflächen"
     resource lab_neu_werkstatt "Werkstatt"
     resource lab_neu_laser "Laser & Lüftung"
-    
+
   }
-  resource lab_alt "Lab (alt)" 
+  resource lab_alt "Lab (alt)"
 }
 
 
@@ -135,6 +138,7 @@ ${persical "mose"}
 ${persical "mozart"}
 ${persical "norberts"}
 ${persical "rainer1"}
+${persical "rolfn"}
 ${persical "romanj"}
 ${persical "schimmi"}
 ${persical "simonp"}
