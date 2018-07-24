@@ -208,6 +208,6 @@ macro allocate_all [
 ]
 
 macro useLabPart [
-  allocate lab_general1 { alternative lab_general2, lab_general3 } {mandatory}
+  allocate lab_general1 { alternative lab_general2, lab_general3 mandatory }
 ]
 
