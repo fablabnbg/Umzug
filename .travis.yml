@@ -3,7 +3,8 @@ install:
   - gem install rake rspec
 
 script:
-  - rake
+  - tj3 -o reports Umzug.tjp"
+#  - rake
 
 deploy:
   provider: pages
