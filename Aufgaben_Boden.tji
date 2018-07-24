@@ -11,10 +11,10 @@ supplement task umzug {
     task decken_streichen "Decke streichen" {
       allocate ianh {mandatory}
       allocate pfs {mandatory}
+      ${useLabPart}
       depends milestones.handover, !!elektrik.baustrom, !reservierung_sprueh {gapduration 7d}
       effort 48h
-      // Ian + 3 Helfer
-      allocate ianh
+      // Ian + 3 Helfer      
       ${select1FromHelperPool}
       ${select1FromHelperPool}
       ${select1FromHelperPool}
