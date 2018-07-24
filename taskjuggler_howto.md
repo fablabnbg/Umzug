@@ -24,13 +24,19 @@ Zur Planung benötigen wir folgende Informationen:
 * Alles, was als Vorbereitung für eine andere Aufgabe dient (z.B. Planung oder Reservierung von zu leihenden Geräten)
 * Thematisch zusammenhängende Aufgabe sollen durch eine übergreifene Aufgabe gruppiert werden
 
+_**Keine**_ Aufgaben sind:
+
+* allgemeine Planungstätigkeiten (als Terminabstimmung usw.)
+  * das kostet natürlich auch Zeit, aber wir machen ja keine Zeiterfassung usw.
+* Wartezeiten (z.B. Lieferzeiten) (außer sie belegen Ressourcen (z.B. Trockenzeiten nach Streichen))
+  * Informationen über Wartezeiten sind aber natürlich trotzdem wichtig, siehe unten
+
 Überlegt euch, was Grundvorraussetzung ist, damit die Aufgabe starten kann
 
-* Es sollte genau einer der definierten Meilensteine Grundvorraussetzung sein (z.B. "Rohbau fertig").  
 * In der Regel bauen die Aufgaben innerhalb eines Verantwortungsbereich aufeinander auf, es sollte klar erkenntlich sein, wie.
 * Abhängigkeiten zu Aufgaben anderer Bereiche sind auch möglich, sollten aber so gering wie möglich gehalten werden.
-  * wenn möglich, sollten stattdessen die Meilensteine verwendet werden
-* Wenn Wartezeiten dabei sind (z.B. Bestellungen, Reservierung Werkzeug) plant diese mit genügend Puffer ein
+  * wenn möglich, sollten stattdessen die Meilensteine verwendet werden (dafür sind die da!)
+* Wenn Wartezeiten dabei sind (z.B. Bestellungen, Reservierung Werkzeug) plant diese mit genügend Puffer ein. Also z.B. Aufgabe "Wand streichen" hängt ab von "Farbsprüheinrichtung reserviert" + _5 Tage_.
 
 * __TODO__: Template Aufgabe
 
