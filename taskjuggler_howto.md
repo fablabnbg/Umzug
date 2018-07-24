@@ -1,6 +1,6 @@
 # Howto taskjuggle..
 
-Wir das Projekt Management verwenden wir TaskJuggler, damit werden die Informationen auf https://fablabnbg.github.io/Umzug/ generiert.
+Für das Projekt Management verwenden wir TaskJuggler. Damit werden die Informationen auf https://fablabnbg.github.io/Umzug/ anhand der Projektkonfiguration auf https://github.com/fablabnbg/Umzug generiert.
 
 Für die einzelnen Bereiche ("Teilprojekte") haben wir Verantwortliche festgelegt.
 
@@ -11,6 +11,8 @@ Zur Planung benötigen wir folgende Informationen:
     * Als Standard haben wir "Mo - Fr 18:00 - 22:00 und Sa - So 10:00 - 22:00" festgelegt.
   * Wann ihr nicht zur Verfügung steht (Urlaub wegfahren, Dienstreisen usw.) oder besonders viel zur Verfügung steht (Urlaub zu Hause)
   * Aktuelle Kontaktdaten (Mail und Handy)
+  * Wieviel Zeit (in Stunden) ihr ungefähr pro Woche oder Monat für den Lab-Umzug habt
+    * z.B. "20h", wenn 2 Abende unter der Woche a 5 Stunden und ein Tag am Wochenende a 10h möglich sind.
 
 ## Verantwortliche
 
@@ -54,7 +56,7 @@ Zur Planung benötigen wir folgende Informationen:
 * Abhängigkeiten werden mit `depeneds` definiert.
 * Den Gesamtaufwand in Personenstunden gibt ihr mit `effort` an. Falls ein Task andauert, aber keinen Aufwand erzeugt (z.B. Trockenzeiten), gebt eine Duration an.
 * Die benötigten Ressourcen (Helfer, aber auch Werkzeug) gibt ihr mit `allocate` an.
-* Die vorhanden Ressourcen seht ihr in der Datei [Resourcen.tji](https://github.com/fablabnbg/Umzug/blob/master/Resourcen.tji)
+* Die vorhandenen Ressourcen seht ihr in der Datei [Resourcen.tji](https://github.com/fablabnbg/Umzug/blob/master/Resourcen.tji)
 * Um Helfer aus den Pool zu allozieren, nutzt das Makro `${select1FromHelperPool}`
 
 #### Details Aufgaben
@@ -67,4 +69,3 @@ Zur Planung benötigen wir folgende Informationen:
 * Wartezeiten:
   * wenn diese Ressourcen binden (z.B. Lab oder Bereiche vom Lab): als Task mit einer festen `duration` eintragen (z.B. Boden trocknet nach Streichen)
   * wenn diese keine Ressourcen binden (z.B. Bestellung): Nutzt Abhängigkeiten mit einer `mingapduration`.
-
