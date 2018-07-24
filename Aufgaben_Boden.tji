@@ -45,10 +45,12 @@ supplement task umzug {
         ${select1FromHelperPool}
       }
       task boden_trocknen1 "Boden streichen: Trocknen 1" {
+        depends !boden_streichen1
         length 16h
       }
       task boden_streichen2 "Boden streichen: Schritt 2" {
         effort 16h
+        depends !boden_trocknen1
         // Ian + 2 Helfer
         allocate ianh
         ${select1FromHelperPool}
@@ -56,7 +58,8 @@ supplement task umzug {
       }
       task boden_trocknen2 "Boden streichen: Trocknen 2" {
         length 24h /* längere Zeit, damit vollständig trocknet */
-        //precedes milestones.rohbau
+        depends !boden_streichen2
+        //precedes milestones.rohbau /* TODO: funktioniert leider nicht? */
       }
     }
   }
