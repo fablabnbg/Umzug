@@ -136,7 +136,9 @@ resource spezial "Weitere Ressourcen" {
     resource lab_neu_lager "Lagerflächen"
     resource lab_neu_werkstatt "Werkstatt"
     resource lab_neu_laser "Laser & Lüftung"
-
+    resource lab_general1 "Labnutzung Allgmein (1)"
+    resource lab_general2 "Labnutzung Allgmein (2)"
+    resource lab_general3 "Labnutzung Allgmein (3)"
   }
   resource lab_alt "Lab (alt)"
 }
@@ -205,5 +207,7 @@ macro allocate_all [
     allocate cedricj, klausl
 ]
 
-
+macro useLabPart [
+  allocate lab_general1 { alternative lab_general2, lab_general3 }
+]
 
