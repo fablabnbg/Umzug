@@ -81,6 +81,14 @@ resource personen "Personen" {
 
   resource joo "Joo"
 
+  resource juewei "Jürgen W." {
+    workinghours mon-tue off
+    workinghours wed-thu 21:00-24:00
+    workinghours fri off
+    workinghours sat-sun 10:00-24:00
+    leaves annual 2018-08-20 - 2018-09-16
+  }
+
   resource kair "Kai R." {
     workinghours mon-thu 18:00-23:00
     workinghours fri-sun off
@@ -140,6 +148,15 @@ resource personen "Personen" {
     workinghours sun off
     leaves annual 2018-08-15 - 2018-08-19
     leaves annual 2018-10-21 - 2018-10-31
+  }
+
+  resource rainer2 "Rainer 2" {
+    workinghours mon-wed off
+    workinghours thu 09:00-16:00
+    workinghours fri 09:00-14:00
+    workinghours sat 14:00-17:00
+    workinghours sun off
+    leaves annual 2018-08-31 - 2018-09-02
   }
 
   resource rolandm "Roland M." {
