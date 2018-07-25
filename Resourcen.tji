@@ -48,6 +48,9 @@ resource personen "Personen" {
     leaves annual 2018-10-01 - 2018-10-31
   }
 
+  resource hannes "Hannes R." {
+    workinghours mon-sun 12:00-24:00
+  }
   resource heinzb "Heinz B." {
     workinghours mon-tue off
     workinghours wed 18:00-24:00
