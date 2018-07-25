@@ -16,10 +16,11 @@ flags isresource
 
 resource personen "Personen" {
   resource angelar "Angela vR."
+
   resource cedricj "Cedric J." {
     workinghours mon-sun off
   }
-  
+
   resource christians "Christian S." {
     workinghours mon-thu off
     workinghours fri 19:00-24:00
@@ -28,6 +29,17 @@ resource personen "Personen" {
     leaves annual 2018-09-07 +3d
     leaves annual 2018-09-28 +3d
   }
+
+  resource guenterj "Günter J." {
+    workinghours mon off
+    workinghours tue-fri 18:00-24:00
+    workinghours sat-sun 16:00-24:00
+    leaves annual 2018-09-21 +3d
+    leaves annual 2018-08-03 - 2018-08-12
+    leaves annual 2018-08-17 - 2018-08-20
+    leaves annual 2018-10-01 - 2018-10-31
+  }
+
   resource heinzb "Heinz B." {
     workinghours mon-tue off
     workinghours wed 18:00-24:00
@@ -37,6 +49,7 @@ resource personen "Personen" {
     workinghours sun off
     leaves annual 2018-08-13
   }
+
   resource ianh "Ian H." {
     workinghours mon-fri 19:00-24:00
     workinghours sat-sun 10:00-22:00
@@ -44,7 +57,7 @@ resource personen "Personen" {
            annual 2018-08-17 +3d,
            annual 2018-08-24 +3d
   }
-  
+
   resource jank "Jan K."
 
   resource jensk "Jens K."
@@ -54,52 +67,54 @@ resource personen "Personen" {
     leaves annual 2018-08-08
     leaves annual 2018-10-01 - 2018-10-31
   }
+
   resource joo "Joo"
-  
+
   resource katharinan "Katharina N." {
     workinghours mon-fri 18:00-22:00
     workinghours sat-sun 10:00-22:00
     leaves annual 2018-09-28 +3d
   }
+
   resource kilianb "Kilian B."
-  
+
   resource kkaempf "Klaus K."
-  
+
   resource klausl "Klaus L." {
     workinghours mon-fri 18:00-23:00
     workinghours sat-sun 10:00-21:00
     leaves annual 2018-08-20 +7d
   }
-  
+
   resource michaelp "Michael P." {
     workinghours mon, fri 17:00-24:00
     workinghours tue-thu off
     workinghours sat-sun 10:00-24:00
     leaves annual 2018-08-01 - 2018-08-31
   }
-  
+
   resource mose "Mose"
-  
+
   resource mozart "Mozart"
-  
+
   resource norberts "Norbert S." {
     workinghours mon-fri 19:00-23:00
     workinghours sat 10:00-24:00
     workinghours sun 11:00-20:30
     shifts urlaub 2018-08-13 - 2018-08-24  
   }
-  
+
   resource rainer1 "Rainer 1"
-  
+
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
     workinghours thu-sun off
   }
-  
+
   resource romanj "Roman J."
-  
+
   resource schimmi "Schimmi"
-  
+
   resource simonp "Simon P." {
     workinghours mon-wed 18:30-22:00
     workinghours thu off
@@ -108,19 +123,14 @@ resource personen "Personen" {
     workinghours sun 12:00-21:00
     leaves annual 2018-08-04 - 2018-08-28
   }
-  
+
   resource tobiasb "Tobias B."
-  
+
   resource ullar "Ulla R."
-  
+
   resource veronikab "Veronika B."
-  
+
   resource yvonneb "Yvonne B."
-  
-  
-  
-  
-  
 }
 
 /* spezielle Ressourcen */
