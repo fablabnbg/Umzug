@@ -30,6 +30,14 @@ resource personen "Personen" {
     leaves annual 2018-09-28 +3d
   }
 
+  resource detlefg "Detlef G." {
+    workinghours mon-thu 17:00-21:30
+    workinghours fri off
+    workinghours sat 11:00-19:00
+    workinghours sun off
+    leaves annual 2018-08-16 - 2018-09-10
+  }
+
   resource guenterj "Günter J." {
     workinghours mon off
     workinghours tue-fri 18:00-24:00
@@ -70,6 +78,12 @@ resource personen "Personen" {
 
   resource joo "Joo"
 
+  resource kair "Kai R." {
+    workinghours mon-thu 18:00-23:00
+    workinghours fri-sun off
+    leaves annual 2018-08-16 - 2018-08-20
+  }
+
   resource katharinan "Katharina N." {
     workinghours mon-fri 18:00-22:00
     workinghours sat-sun 10:00-22:00
@@ -101,17 +115,39 @@ resource personen "Personen" {
     workinghours mon-fri 19:00-23:00
     workinghours sat 10:00-24:00
     workinghours sun 11:00-20:30
-    shifts urlaub 2018-08-13 - 2018-08-24  
+    shifts urlaub 2018-08-13 - 2018-08-24
+  }
+
+  resource simont "Simon T." {
+    workinghours mon off
+    workinghours tue-thu 19:00-23:00
+    workinghours fri-sun off
+  }
+
+  resource stefans "Stefan S." {
+    workinghours mon-fri 17:30-22:00
+    workinghours sat off
+    workinghours sun 12:00-21:00
+    leaves annual 2018-08-05
   }
 
   resource rainer1 "Rainer 1"
+
+  resource rolandm "Roland M." {
+    workinghours mon-sun 10:00-19:00
+  }
 
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
     workinghours thu-sun off
   }
 
-  resource romanj "Roman J."
+  resource romanj "Roman J." {
+    workinghours mon-fri 18:30-23:00
+    workinghours sat-sun 10:00-24:00
+    shifts urlaub 2018-09-08 - 2018-09-14
+    leaves annual 2018-09-15 - 2018-09-23
+  }
 
   resource schimmi "Schimmi"
 
