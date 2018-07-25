@@ -134,7 +134,13 @@ resource personen "Personen" {
     leaves annual 2018-08-05
   }
 
-  resource rainer1 "Rainer 1"
+  resource rainer1 "Rainer 1" {
+    workinghours mon-fri 18:30-22:00
+    workinghours sat 13:00-21:00
+    workinghours sun off
+    leaves annual 2018-08-15 - 2018-08-19
+    leaves annual 2018-10-21 - 2018-10-31
+  }
 
   resource rolandm "Roland M." {
     workinghours mon-sun 10:00-19:00
