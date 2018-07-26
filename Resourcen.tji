@@ -103,7 +103,11 @@ resource personen "Personen" {
 
   resource kilianb "Kilian B."
 
-  resource kkaempf "Klaus K."
+  resource kkaempf "Klaus K." {
+    workinghours mon-fri 18:00-22:00
+    workinghours sat-sun 15:00-21:00
+    leaves annual 2018-08-04 +14d
+  }
 
   resource klausl "Klaus L." {
     workinghours mon-fri 18:00-23:00
