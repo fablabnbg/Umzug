@@ -7,7 +7,7 @@ von Terminen, Aufgaben und deren Abhängigkeiten.
 
 ## Aktueller Projektstand
 
-https://fablabnbg.github.io/Umzug/Overview.html
+https://fablabnbg.github.io/Umzug/
 
 
 ## Benutzung
