@@ -105,6 +105,25 @@ taskreport index "" {
   ->8-
 }
 
+# LeafTask <id> <name>
+
+macro LeafTask [
+  taskreport rep_${1} "${2}" {
+    formats html
+    columns bsi { title 'Nr' }, name, start, end, effort, chart { ${TaskTip} }
+    # For this report we like to have the abbreviated weekday in front
+    # of the date. %a is the tag for this.
+    timeformat "%a %Y-%m-%d"
+    loadunit days
+    hideresource 1
+    hidetask ~ischildof(umzug.${1})
+    sorttasks plan.start.up
+  }
+]
+
+
+${LeafTask "boden_und_decken" "Boden und Decken"}
+
 # Macro to set the background color of a cell according to the alert
 # level of the task.
 macro AlertColor [
