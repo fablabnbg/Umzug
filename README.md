@@ -23,11 +23,11 @@ https://fablabnbg.github.io/Umzug/Overview.html
 
 * Festes Datum
 
-  `start` <datum> und `end` <datum> verwenden
+  `start` &lt;datum&gt; und `end` &lt;datum&gt; verwenden
 
   oder
 
-  `start` <datum> `+`<n>`d` für 'n' Tage
+  `start` &lt;datum&gt; `+`&lt;n&gt;`d` für 'n' Tage
 
 * Feste Länge, egal wieviel Helfer
 
