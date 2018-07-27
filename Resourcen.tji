@@ -79,7 +79,13 @@ resource personen "Personen" {
     leaves annual 2018-10-01 - 2018-10-31
   }
 
-  resource joo "Joo"
+  resource joo "Joo" {
+    workinghours mon-fri 19:00-24:00
+    workinghours sat off
+    workinghours sun 13:00-21:00
+    shifts urlaub 2018-08-27 - 2018-08-31
+    leaves annual 2018-08-17
+  }
 
   resource juewei "Jürgen W." {
     workinghours mon-tue off
