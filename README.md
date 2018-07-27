@@ -19,6 +19,25 @@ https://fablabnbg.github.io/Umzug/Overview.html
 3. `rake`
 
 
+### Aufwände eintragen
+
+* Festes Datum
+
+  `start` <datum> und `end` <datum> verwenden
+
+  oder
+
+  `start` <datum> `+`<n>`d` für 'n' Tage
+
+* Feste Länge, egal wieviel Helfer
+
+  `length`
+
+* Skaliert auf mehr Helfer
+
+  `effort`
+
+
 ## Travis CI
 
 Letzter Build [hier](https://travis-ci.org/fablabnbg/Umzug)
