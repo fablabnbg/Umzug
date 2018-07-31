@@ -14,6 +14,10 @@ Zur Planung benötigen wir folgende Informationen:
   * Wieviel Zeit (in Stunden) ihr ungefähr pro Woche oder Monat für den Lab-Umzug habt
     * z.B. "20h", wenn 2 Abende unter der Woche a 5 Stunden und ein Tag am Wochenende a 10h möglich sind.
 
+## externe Helfer
+
+Es haben auch einige Nicht-Mitglieder angeboten zu helfen. Für diese gibt es eine eigene [Helfer_FAQ](Helfer_FAQ.md).
+
 ## Verantwortliche
 
 ### ... like a n00b
