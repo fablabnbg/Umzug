@@ -90,8 +90,7 @@ taskreport index "" {
   timeformat "%a %Y-%m-%d"
   loadunit days
   hideresource 1
-  hidetask isleaf()
-  sorttasks plan.start.up
+  sorttasks tree.up
   caption 'Alle Aufwände sind in Manntagen angegeben.'
 
   footer -8<-
@@ -106,7 +105,6 @@ taskreport index "" {
 }
 
 # LeafTask <id> <name>
-
 macro LeafTask [
   taskreport rep_${1} "${2}" {
     formats html
@@ -117,10 +115,9 @@ macro LeafTask [
     loadunit days
     hideresource 1
     hidetask ~ischildof(umzug.${1})
-    sorttasks plan.start.up
+    sorttasks tree.up
   }
 ]
-
 
 ${LeafTask "boden_und_decken" "Boden und Decken"}
 
