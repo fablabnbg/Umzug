@@ -7,7 +7,7 @@ von Terminen, Aufgaben und deren Abhängigkeiten.
 
 ## Aktueller Projektstand
 
-https://fablabnbg.github.io/Umzug/Overview.html
+https://fablabnbg.github.io/Umzug/
 
 
 ## Benutzung
@@ -17,6 +17,25 @@ https://fablabnbg.github.io/Umzug/Overview.html
 2. Dieses Repo clonen (`git clone https://github.com/fablabnbg/Umzug.git`)
 
 3. `rake`
+
+
+### Aufwände eintragen
+
+* Festes Datum
+
+  `start` &lt;datum&gt; und `end` &lt;datum&gt; verwenden
+
+  oder
+
+  `start` &lt;datum&gt; `+`&lt;n&gt;`d` für 'n' Tage
+
+* Feste Länge, egal wieviel Helfer
+
+  `length`
+
+* Skaliert auf mehr Helfer
+
+  `effort`
 
 
 ## Travis CI

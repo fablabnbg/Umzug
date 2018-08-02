@@ -84,12 +84,14 @@ taskreport index "" {
 
   === Projektplan ===
   ->8-
-  columns bsi { title 'WBS' }, name, start, end, effort, chart { ${TaskTip} }
+  columns bsi { title 'Nr' }, name, start, end, effort, chart { ${TaskTip} }
   # For this report we like to have the abbreviated weekday in front
   # of the date. %a is the tag for this.
   timeformat "%a %Y-%m-%d"
   loadunit days
   hideresource 1
+  hidetask isleaf()
+  sorttasks plan.start.up
   caption 'Alle Aufwände sind in Manntagen angegeben.'
 
   footer -8<-
@@ -103,6 +105,25 @@ taskreport index "" {
   ->8-
 }
 
+# LeafTask <id> <name>
+
+macro LeafTask [
+  taskreport rep_${1} "${2}" {
+    formats html
+    columns bsi { title 'Nr' }, name, start, end, effort, chart { ${TaskTip} }
+    # For this report we like to have the abbreviated weekday in front
+    # of the date. %a is the tag for this.
+    timeformat "%a %Y-%m-%d"
+    loadunit days
+    hideresource 1
+    hidetask ~ischildof(umzug.${1})
+    sorttasks plan.start.up
+  }
+]
+
+
+${LeafTask "boden_und_decken" "Boden und Decken"}
+
 # Macro to set the background color of a cell according to the alert
 # level of the task.
 macro AlertColor [
@@ -112,7 +133,7 @@ macro AlertColor [
 ]
 
 taskreport status "" {
-  columns bsi { width 50 title 'WBS' }, name { width 150 }, start { width 100 }, end { width 100 }, effort { width 100 },
+  columns bsi { width 50 title 'Nr' }, name { width 50 }, start { width 50 }, end { width 50 }, effort { width 50 },
   alert { tooltip plan.journal != ''
   "<-query attribute='journal'->" width 150 },
   status { width 150 }
@@ -149,7 +170,7 @@ taskreport status "" {
 # A list of tasks showing the resources assigned to each task.
 taskreport umzug_resources "" {
   headline "Umzug - Übersicht Helfer"
-  columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
+  columns bsi { title 'Nr' }, name, start, end, effort { title "Work" },
       duration, chart { ${TaskTip} scale day width 500 }
   timeformat "%Y-%m-%d"
   hideresource ~(isleaf() & isleaf_())

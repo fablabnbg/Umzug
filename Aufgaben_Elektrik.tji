@@ -18,12 +18,33 @@ supplement task umzug {
         note "Zusammenbau des Verteilers vor Installation (im alten oder neuen Lab oder zu Hause)"
         effort 10h
       }
-
       task hauptverteiler_installation "Hauptverteiler: Installation" {
         effort 6h
         depends !hauptverteiler_montage, milestones.access
       }
-
+    }
+    task widerstandmessgeraet "Schimmis Widerstandmessgerät" {
+        effort 72h
+        priority 300
+        allocate schimmi
+        limits { dailymax 2h } // Hack, damit nicht der Gesamtaufwand sofort aufgebraucht wird.
+    }
+    task einstallation "Elektroinstallation" {
+      depends !hauptverteiler
+      task einstallation_bestellung "Planung und Bestellung der Komponenten für Elektro" {
+        effort 16h
+        allocate schimmi
+      }
+      task einstallation_lab "Installation der Steckdosen, Schalter usw." {
+        effort 96h
+        allocate schimmi
+        depends !einstallation_bestellung {gapduration 2w}
+      }
+    }
+    task epruefung "E-Prüfung" {
+      effort 16h
+      allocate schimmi
+      depends !widerstandmessgeraet, !einstallation //TODO: Task Trockenbau
     }
   }
 }
