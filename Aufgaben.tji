@@ -5,6 +5,7 @@ task umzug "Umzug" {
 }
 
 include "Aufgaben_Elektrik.tji"
+include "Aufgaben_Elektronik.tji"
 include "Aufgaben_Boden.tji"
 include "Aufgaben_Trockenbau.tji"
 include "Aufgaben_3D.tji"

@@ -1,0 +1,11 @@
+supplement task umzug {
+  task elektronik "Elektronik" {
+    responsible romanj
+    task baustrom "Sort" {
+      effort 4h
+      allocate schimmi { mandatory }
+      allocate lab_neu { mandatory }
+      depends milestones.access
+    }
+  }
+}
