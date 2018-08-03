@@ -84,7 +84,7 @@ taskreport index "" {
 
   === Projektplan ===
   ->8-
-  columns bsi { title 'Nr' }, name, start, end, effort, chart { ${TaskTip} }
+  columns bsi { title 'Nr' }, name, start, end, effort, chart { scale day ${TaskTip} }
   # For this report we like to have the abbreviated weekday in front
   # of the date. %a is the tag for this.
   timeformat "%a %Y-%m-%d"
