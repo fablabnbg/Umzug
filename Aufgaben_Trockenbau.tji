@@ -1,0 +1,45 @@
+supplement task umzug {
+  task trockenbau "Trockenbau" {
+    responsible mose
+    depends !boden_und_decken
+
+    task aufmass "Aufmaß erstellen" {
+      duration 8h
+    }
+
+    task beschaffung "Beschaffung" {
+      duration 8h
+      depends !aufmass
+    }
+
+    task bblg_l "BBLG Labseitig" {
+      duration 3d
+      note "Ständerwerk zum Lab und zweifache Beplankung"
+      depends !beschaffung
+    }
+
+    task bblg_i "BBLG Innen" {
+      duration 5d
+      note "Ständerwerk innenliegend und zweifache Beplankung"
+      depends !bblg_l
+    }
+
+    task kw "KW Komplett" {
+      duration 3d
+      depends !beschaffung
+    }
+
+    task rad_l "RAD Labseitig" {
+      duration 2d
+      note "Ständerwerk zum Lab und zweifache Beplankung"
+      depends !bblg_l
+      depends !beschaffung
+    }
+
+    task rad_i "RAD Innen" {
+      duration 1d
+      note "Ständerwerk innenliegend und zweifache Beplankung"
+      depends !rad_l
+    }
+  }
+}
