@@ -15,6 +15,9 @@ shift na "Nicht verfügbar" {
 flags isresource
 
 resource personen "Personen" {
+  workinghours mon - fri 18:00 - 22:00
+  workinghours sat - sun 10:00 - 22:00
+
   resource angelar "Angela vR."
 
   resource cedricj "Cedric J." {
