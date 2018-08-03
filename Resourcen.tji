@@ -17,6 +17,11 @@ flags isresource
 resource personen "Personen" {
   workinghours mon - fri 18:00 - 22:00
   workinghours sat - sun 10:00 - 22:00
+  limits {
+    dailymax 10h
+    weeklymax 60h
+    monthlymax 200h
+  }
 
   resource angelar "Angela vR."
 
