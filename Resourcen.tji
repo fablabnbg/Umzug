@@ -136,7 +136,10 @@ resource personen "Personen" {
     leaves annual 2018-08-01 - 2018-08-31
   }
 
-  resource mose "Mose"
+  resource mose "Mose" {
+    workinghours mon-sun 10:00-24:00
+    leaves annual 2018-10-02 +2d
+  }
 
   resource mozart "Mozart"
 
@@ -237,16 +240,17 @@ resource spezial "Weitere Ressourcen" {
 /* eigenes Werkzeug (inkl. Werkzeug von Mitgliedern) */
 resource werkzeug "Werkzeug, Fuhrpark usw." {
   flags isresource
-  efficiency 0.01 // ersetzt keine Helfer
+  efficiency 0 // ersetzt keine Helfer
   resource fahrgeruest "Fahrgerüst"
   resource anhaenger "Anhänger"
+  resource giraffe "Giraffe (inkl. Sauger)"
 }
 
 
 /* extern geliehenes Werkzeug  */
 resource werkzeug_ext "Auszuleihendes Werkzeug" {
   flags isresource
-  efficiency 0.01 // ersetzt keine Helfer
+  efficiency 0 // ersetzt keine Helfer
   limits{dailymin 4h}
   resource fbsm "Fussbodenschleifmaschine (Beton)"
   resource kernlochbohrer "Kernlochbohrer"
