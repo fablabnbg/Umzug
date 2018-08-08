@@ -8,9 +8,12 @@ shift urlaub "Urlaub" {
   workinghours mon-sun 08:00-24:00
 }
 
-shift na "Nicht verfügbar" {
-  leaves annual ${projectstart} - ${projectend}
-}
+macro sciencecamp [
+  leaves annual 2018-08-27
+  leaves annual 2018-08-28
+  leaves annual 2018-08-29
+  leaves annual 2018-08-31
+]
 
 flags isresource
 
@@ -100,6 +103,7 @@ resource personen "Personen" {
     workinghours wed-thu 21:00-24:00
     workinghours fri off
     workinghours sat-sun 10:00-24:00
+    ${sciencecamp}
     leaves annual 2018-08-20 - 2018-09-16
   }
 
@@ -138,6 +142,7 @@ resource personen "Personen" {
 
   resource mose "Mose" {
     workinghours mon-sun 10:00-24:00
+    ${sciencecamp}
     leaves annual 2018-10-02 +2d
   }
 
@@ -182,11 +187,13 @@ resource personen "Personen" {
 
   resource rolandm "Roland M." {
     workinghours mon-sun 10:00-19:00
+    ${sciencecamp}
   }
 
   resource rolfn "Rolf N." {
     workinghours mon-wed 08:00-24:00
     workinghours thu-sun off
+    ${sciencecamp}
   }
 
   resource romanj "Roman J." {
@@ -244,6 +251,10 @@ resource werkzeug "Werkzeug, Fuhrpark usw." {
   resource fahrgeruest "Fahrgerüst"
   resource anhaenger "Anhänger"
   resource giraffe "Giraffe (inkl. Sauger)"
+  resource geruest "Außengerüst" {
+    leaves annual 2018-01-01 - 2018-10-05
+    leaves annual 2018-11-01 - 2019-01-01
+  }
 }
 
 
