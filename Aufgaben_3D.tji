@@ -2,5 +2,48 @@ supplement task umzug {
   task dreid "3D inkl. Abluft" {
   responsible joo
   /* **** insert tasks here ****/
+    task dreid_abbau "Abbau 3D" {
+      effort 4h
+      note "Rückbau und Vorbereitung für Umzug"
+      allocate joo
+      complete 0
+    }
+    task dreid_umzug "Umzug 3D"{
+      //depends Infrastuktur sollte vorhanden sein: Strom/Netzwerk/Trockenbau �rtlich fertig
+      effort 4h
+      note "Rückbau und Vorbereitung für Umzug"
+      allocate joo
+      complete 0
+      depends !dreid_abbau, milestones.trockenbau
+    }
+    task dreid_aufbau "Aufbau 3D" {
+      effort 4h
+      note "Rückbau und Vorbereitung für Umzug"
+      allocate joo
+      complete 0
+      depends !dreid_umzug
+    }
   }
 }
+
+/*
+
+Hauptraum:
+- 2x 60x160 Tische mit Unterschubkisten (wie bisher)
+- 2 Drehstühle
+
+Lager:
+- 1x Eurokiste Werkzeug/Verbrauchsmaterial (sollte gut zug�nglich sein)
+- 1x Eurokiste Teilelager (kann auch oben aufs Regal)
+
+Anschl�sse:
+- mind. 4x 230V Schuko, ggfs. Notstrom?
+- mind. 2x Ethernet bestenfalls im Kabelkanal
+
+Umzug:
+2x Tische (auf Palette in Transporter)
+2x Unterschubkisten (auf Palette/rollbar in Transporter)
+3x Drucker + Laptop (am besten im Auto)
+Dauer: max. halber Tag, kombinierbar mit anderen Bereichen
+
+*/

@@ -1,4 +1,4 @@
-supplement task umzug {   
+supplement task umzug {
   task lager "Lagerflächen, Flohmarkt usw." {
     responsible simonp
 
@@ -11,7 +11,8 @@ supplement task umzug {
       allocate veronikab
       allocate tobiasb
       allocate michaelp
+      complete 100
     }
-  
+
   }
 }

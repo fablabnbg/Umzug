@@ -1,0 +1,18 @@
+supplement task umzug {
+  task elektronik "Elektronik" {
+    responsible romanj
+    task sort "Bauelemente sortieren" {
+      start 2018-08-08-19:00
+	  end	2018-08-15-19:00
+	  allocate romanj
+	  complete 0
+    }
+	task deploy "Geräte verpacken" {
+	  start 2018-08-15-19:00
+	  end	2018-08-22-19:00
+	  depends !sort
+	  allocate romanj
+	  complete 0
+	}
+  }
+}
