@@ -13,8 +13,15 @@ supplement task umzug {
         note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
         effort 20h
       }
+
+      task hauptverteiler_bestellung "Hauptverteiler: Bestellung aller Komponenten" {
+        note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
+        depends !hauptverteiler_planung
+        effort 2h
+      }
+
       task hauptverteiler_montage "Hauptverteiler: Vor-Montage" {
-        depends !hauptverteiler_planung { gapduration 5d } // 7d fuer Bestellung und Lieferung aller Komponenten
+        depends !hauptverteiler_bestellung { gapduration 7d } // 7d fuer Bestellung und Lieferung aller Komponente !hauptverteiler_planung { gapduration 5d } // 7d fuer Bestellung und Lieferung aller Komponenten
         note "Zusammenbau des Verteilers vor Installation (im alten oder neuen Lab oder zu Hause)"
         effort 10h
       }
