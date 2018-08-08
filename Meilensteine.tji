@@ -1,18 +1,20 @@
 task milestones "Meilensteine" {
+  duration 0m
 
   task start "Projektstart" {
+    milestone
     start ${projectstart}
   }
   task access "Zugang möglich" {
     depends !!milestones.start
-    start 2018-08-15-15:00 // geschätzt
-    note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich) - Zeitpunkt spekulativ"
+    start 2018-08-21-08:00 // gesetzt
+    note "Zugang zum Lab ist möglich, aber noch nicht leer (keine größeren Arbeiten möglich) - Zeitpunkt geklärt"
   }
 
   task handover "Übergabe erfolgt" {
     depends !!milestones.access
-    start 2018-09-01-09:00 // erwartet
-    note "Das Lab gehört uns allein (alles leergeräumt). - Zeitpunkt geplant"
+    start 2018-08-31-08:00 // erwartet
+    note "Das Lab gehört uns allein (alles leergeräumt). - Zeitpunkt geklärt"
   }
 
   task rohbau "Rohbau fertig" {
