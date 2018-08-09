@@ -13,6 +13,7 @@ shift na "Nicht verfügbar" {
 }
 
 flags isresource
+flags lkw_fs
 
 resource personen "Personen" {
   workinghours mon - fri 18:00 - 22:00
@@ -44,6 +45,16 @@ resource personen "Personen" {
     workinghours sat 11:00-19:00
     workinghours sun off
     leaves annual 2018-08-16 - 2018-09-10
+  }
+
+  resource felix "Felix" {
+    // bevorzugt 8.9.,9.9, auch 11.8.
+    workinghours mon-fri off
+    workinghours sat 10:00-18:00
+    workinghours sun 13:00-20:00
+    flag lkw_fs
+
+
   }
 
   resource guenterj "Günter J." {
@@ -300,4 +311,3 @@ macro allocate_all [
 macro useLabPart [
   allocate lab_general1 { alternative lab_general2, lab_general3 mandatory }
 ]
-
