@@ -1,57 +1,72 @@
 supplement task umzug {
   task trockenbau "Trockenbau" {
     responsible mose
+    allocate mose
 
     task aufmass "Aufmaß erstellen" {
       duration 1d
       depends milestones.access
-      allocate mose
+      //allocate mose
     }
 
     task beschaffung "Beschaffung" {
       duration 1d
       depends !aufmass
-      allocate mose
+      //allocate mose
     }
 
     task anlieferung "Anlieferung" {
-      duration 1d
+      duration 1d      
       depends !!boden_und_decken
       depends !beschaffung
     }
 
     task bblg_l "BBLG Labseitig" {
-      duration 3d
+      //duration 3d
+      effort 80h
       note "Ständerwerk zum Lab und zweifache Beplankung"
       depends !anlieferung
       allocate giraffe {mandatory}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
     }
 
     task bblg_i "BBLG Innen" {
-      duration 5d
+      effort 150h
       note "Ständerwerk innenliegend und zweifache Beplankung"
       depends !bblg_l
       allocate giraffe {mandatory}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
     }
 
     task kw "KW Komplett" {
-      duration 3d
+      effort 80h
       depends !anlieferung
       allocate giraffe {mandatory}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+
     }
 
     task rad_l "RAD Labseitig" {
-      duration 2d
+      effort 40h
       note "Ständerwerk zum Lab und zweifache Beplankung"
       depends !bblg_l
       allocate giraffe {mandatory}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+
     }
 
     task rad_i "RAD Innen" {
-      duration 1d
+      effort 20h
       note "Ständerwerk innenliegend und zweifache Beplankung"
       depends !rad_l
       allocate giraffe {mandatory}
+      ${select1FromHelperPool}
+      ${select1FromHelperPool}
+
     }
   }
 }

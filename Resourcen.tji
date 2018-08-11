@@ -266,7 +266,7 @@ resource spezial "Weitere Ressourcen" {
 /* eigenes Werkzeug (inkl. Werkzeug von Mitgliedern) */
 resource werkzeug "Werkzeug, Fuhrpark usw." {
   flags isresource
-  efficiency 0 // ersetzt keine Helfer
+  efficiency 0.01 // ersetzt keine Helfer
   resource fahrgeruest "Fahrgerüst"
   resource anhaenger "Anhänger"
   resource giraffe "Giraffe (inkl. Sauger)"
@@ -280,7 +280,7 @@ resource werkzeug "Werkzeug, Fuhrpark usw." {
 /* extern geliehenes Werkzeug  */
 resource werkzeug_ext "Auszuleihendes Werkzeug" {
   flags isresource
-  efficiency 0 // ersetzt keine Helfer
+  efficiency 0.01 // ersetzt keine Helfer
   limits{dailymin 4h}
   resource fbsm "Fussbodenschleifmaschine (Beton)"
   resource kernlochbohrer "Kernlochbohrer"
@@ -298,6 +298,7 @@ macro persical [
 
 ${persical "cedricj"}
 ${persical "christians"}
+${persical "felix"}
 ${persical "heinzb"}
 ${persical "ianh"}
 ${persical "johanns"}
@@ -307,6 +308,7 @@ ${persical "kilianb"}
 ${persical "kkaempf"}
 ${persical "klausl"}
 ${persical "michaelp"}
+${persical "mirko"}
 ${persical "mose"}
 ${persical "mozart"}
 ${persical "norberts"}

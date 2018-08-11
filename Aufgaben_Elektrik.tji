@@ -2,32 +2,36 @@ supplement task umzug {
   task elektrik "Elektrik" {
     responsible schimmi
     task baustrom "Baustrom" {
-      effort 4h
+      effort 16h
       allocate schimmi { mandatory }
       allocate lab_neu { mandatory }
+      allocate ianh, mose
       depends milestones.access
+      complete 100
+      start 2018-08-10-11:00
     }
     task hauptverteiler "Hauptverteilerkasten" {
       allocate schimmi { mandatory }
       task hauptverteiler_planung "Hauptverteiler: Planung" {
-        note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
+        note "Planung des Hauptverteiler"
         effort 20h
+        complete 80
       }
 
-      task hauptverteiler_bestellung "Hauptverteiler: Bestellung aller Komponenten" {
-        note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
-        depends !hauptverteiler_planung
-        effort 2h
-      }
+      //task hauptverteiler_bestellung "Hauptverteiler: Bestellung aller Komponenten" {
+//        allocate schimmi { mandatory }
+  //      note "Planung des Hauptverteiler inkl. Bestellung der Komponenten"
+        //depends !hauptverteiler_planung
+    //    effort 2h
+      //  complete 80
+    //  }
 
-      task hauptverteiler_montage "Hauptverteiler: Vor-Montage" {
-        depends !hauptverteiler_bestellung { gapduration 7d } // 7d fuer Bestellung und Lieferung aller Komponente !hauptverteiler_planung { gapduration 5d } // 7d fuer Bestellung und Lieferung aller Komponenten
-        note "Zusammenbau des Verteilers vor Installation (im alten oder neuen Lab oder zu Hause)"
-        effort 10h
-      }
       task hauptverteiler_installation "Hauptverteiler: Installation" {
-        effort 6h
-        depends !hauptverteiler_montage, milestones.access
+        effort 20h
+        depends milestones.access
+        start 2018-08-10-11:00
+        complete 80
+        allocate ianh, mose
       }
     }
     task widerstandmessgeraet "Schimmis Widerstandmessgerät" {
