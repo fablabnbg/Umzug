@@ -24,17 +24,23 @@ task milestones "Meilensteine" {
   }
 
   task trockenbau "Trockenbau fertig" {
-    depends !!milestones.rohbau, umzug.trockenbau
+    depends milestones.rohbau, umzug.trockenbau
     note "Trockenbau, Deckenverkabelung (Elektrik), Licht usw. fertig"
   }
 
   task moebel "Moebel im Lab" {
-    depends !!milestones.trockenbau
+    depends milestones.trockenbau
     note "Alles ist im Lab, was den Umzug der Geräte und Maschinen ermöglicht. (große Geräte gemeinsam mit großen Möbeln)"
   }
 
-  task umzug  "Alles im Lab" {
-    depends !!milestones.moebel
+  task umzug_tag "Der große Umzugstag" {
+    start 2018-10-05-09:00 // Vorschlag
+    note "Der große Umzugstag, heute soll möglichst alle rüber transportiert werden. Datum 5.10. ist nur erster Vorschlag, aber noch nicht bestätigt."
+    depends milestones.moebel
+  }
+
+  task umzug_complete  "Alles im Lab" {
+    depends milestones.umzug_tag
     note "Alles, was ins neue Lab soll, ist auch da"
   }
 
