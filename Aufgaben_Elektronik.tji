@@ -1,22 +1,28 @@
 supplement task umzug {
   task elektronik "Elektronik" {
     responsible romanj
-    task sort "Lab aufräumen / sortieren" {
-      start 2018-08-11-14:00
+    task sort "E-Lab aufräumen / sortieren" {
+		start 2018-08-11-14:00
 	    end	2018-08-11-19:00
 	    allocate romanj
 	    complete 100
     }
-	  task deploy "Geräte verpacken" {
-	    start 2018-08-15-19:00
-	    end	2018-08-22-19:00
-	    depends !sort
-	    allocate romanj
-	    complete 0
-	  }
+	task optimize "Sortierung optimieren" {
+		start 2018-08-15-19:00
+		end	2018-08-29-19:00
+		allocate romanj
+		complete 0
+	}
+	task deploy "Geräte verpacken" {
+		start 2018-08-11-14:00
+		end	2018-08-22-19:00
+		depends !sort
+		allocate romanj
+		complete 90
+	}
     task move "Geräte ins neue Lab bringen" {
-      depends milestones.trockenbau
-      allocate romanj
+		depends milestones.trockenbau
+		allocate romanj
     }
   }
 }
