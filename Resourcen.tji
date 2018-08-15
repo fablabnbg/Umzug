@@ -30,7 +30,9 @@ resource personen "Personen" {
   resource angelar "Angela vR."
 
   resource cedricj "Cedric J." {
-    workinghours mon-sun off
+    workinghours mon-fri 18:00 - 22:00
+    workinghours sat-sun off
+    // bevorzugt Elektroverteilung mit Schimmi
   }
 
   resource christians "Christian S." {
