@@ -120,6 +120,7 @@ macro LeafTask [
 ]
 
 ${LeafTask "boden_und_decken" "Boden und Decken"}
+${LeafTask "it_fablab" "IT FabLab"}
 
 # Macro to set the background color of a cell according to the alert
 # level of the task.
