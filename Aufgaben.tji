@@ -5,6 +5,7 @@ task umzug "Umzug" {
 }
 
 include "Aufgaben_Elektrik.tji"
+include "Aufgaben_IT.tji"
 include "Aufgaben_Elektronik.tji"
 include "Aufgaben_Boden.tji"
 include "Aufgaben_Trockenbau.tji"
@@ -14,4 +15,3 @@ include "Aufgaben_Werkstatt.tji"
 include "Aufgaben_Lager.tji"
 include "Aufgaben_PR.tji"
 include "Aufgaben_REM.tji"
-include "Aufgaben_IT.tji"
