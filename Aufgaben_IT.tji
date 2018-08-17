@@ -1,0 +1,60 @@
+supplement task umzug {
+  task it_fablab "IT_FabLab" {
+    responsible heinzb
+    allocate heinzb { mandatory }
+    task server_raum "Server_Raum" {
+      // effort 64h
+      //allocate heinzb { mandatory }
+      depends milestones.trockenbau
+      depends umzug.boden_und_decken
+      //depends umzug.trockenbau.rad_l    // REM/Abstell/Dunkelkammer 
+      depends umzug.trockenbau.bblg_l   // Buero/Besprechung/Lager/Getraenke
+      task server_rack "Server_Rack: Planung" {
+        note "Planung des Server Racks inkl. Bestellung neuer Komponenten"
+        effort 20h
+      }
+      task server_rack_abbau "Server Rack Abbau: Abbau im alten Lab" {
+        depends !server_rack { gapduration 5d } // 2d fuer
+        note "Note: Abbau des Server Racks"
+        effort 20h
+      }
+      task server_rack_aufbau "Server Rack Aufbau: Aufbeu im neuen Lab" {
+        depends !server_rack_abbau { gapduration 5d } // 2d fuer
+        note "Note: Abbau des Server Racks"
+        effort 20h
+      }
+    }
+    task netzwerk "Netzwerk Verkabelung" {
+      depends milestones.trockenbau
+      depends umzug.boden_und_decken
+      //allocate heinzb { mandatory }
+      //allocate heinzb { } //
+      task net_lab             "Netzwerk im Lab" {
+        effort 10h
+      }
+      task net_wlan            "Netzwerk WLAN Accesspoints" {
+        effort 10h
+      }
+      task net_laser_ecke      "Netzwerk Laserecke" {
+        effort 10h
+      }
+      task net_meeting_raum    "Netzwerk Meeting Raum" {
+        depends umzug.trockenbau.bblg_l
+        note "Besprechungsraum - Netzwerk Verkabelung in Trockenbauwand"
+        effort 10h
+      }
+      task net_werkstatt       "Netzwerk Werkstatt" {
+        // depends umzug.trockenbau.kw.werkstatt_l
+        note "Werkstatt - Netzwerk Verkabelung in Trockenbauwand"
+        effort 10h
+        //duration 1d
+      }
+      task net_lager           "Netzwerk Lager" {
+        effort 10h
+      }
+      task net_kueche          "Netzwerk Küche" {
+        effort 10h
+      }
+    }
+  }
+}
